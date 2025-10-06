@@ -1,3 +1,5 @@
+// ХЭДЕР НАЧАЛО
+
 // Хэдер при скролле
 let scrollHandler = null;
 const handleHeaderScroll = () => {
@@ -59,6 +61,23 @@ if (templateMenu) {
 	}
 }
 
+// темная тема
+const themeSwitch = document.querySelector('.switch > input');
+
+	if (themeSwitch.checked) {
+		document.body.classList.add('dark');
+	} else {
+		document.body.classList.remove('dark');
+	}
+
+	themeSwitch.addEventListener('input', () => {
+			if (themeSwitch.checked) {
+				document.body.classList.add('dark');
+			} else {
+				document.body.classList.remove('dark');
+			}
+		});
+
 // одинаковая длина вложенных пунктов меню в хедере
 document.querySelectorAll('[data-inner-menu]').forEach((menu) => {
 	const list = menu.querySelectorAll(':scope > li');
@@ -73,6 +92,8 @@ document.querySelectorAll('[data-inner-menu]').forEach((menu) => {
 		item.style.flexBasis = `${maxWidth}px`;
 	});
 });
+
+// ХЭДЕР КОНЕЦ
 
 // количество слайдов в карусели на главной
 let counter = document.querySelector('.main-hero__counter');
@@ -388,15 +409,7 @@ if (document.getElementById('map')) {
 	}
 }
 
-// темная тема
-const themeSwitch = document.querySelector('.switch > input');
-themeSwitch.addEventListener('input', () => {
-	if (themeSwitch.checked) {
-		document.body.classList.add('dark');
-	} else {
-		document.body.classList.remove('dark');
-	}
-});
+
 
 // Открывашка текста
 const expandButton = document.querySelector('.expand-button');
