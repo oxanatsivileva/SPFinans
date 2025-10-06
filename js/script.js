@@ -1,44 +1,44 @@
 // ХЭДЕР НАЧАЛО
 
 // Хэдер при скролле
-let scrollHandler = null;
-const handleHeaderScroll = () => {
-	const header = document.getElementById('header');
-	if (!header) return;
-	if (window.scrollY > 100) {
-		header.classList.add('scrolled-menu');
-	} else {
-		header.classList.remove('scrolled-menu');
-	}
-};
-const initHeaderScroll = () => {
-	const header = document.getElementById('header');
-	if (!header) return;
-	if (scrollHandler) {
-		window.removeEventListener('scroll', scrollHandler);
-		scrollHandler = null;
-	}
-	if (document.documentElement.clientWidth > 991) {
-		scrollHandler = handleHeaderScroll;
-		window.addEventListener('scroll', scrollHandler);
-		handleHeaderScroll();
-	} else {
-		header.classList.remove('scrolled-menu');
-	}
-};
-const debounce = (func, wait) => {
-	let timeout;
-	return function executedFunction(...args) {
-		const later = () => {
-			clearTimeout(timeout);
-			func(...args);
-		};
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-	};
-};
-initHeaderScroll();
-window.addEventListener('resize', debounce(initHeaderScroll, 100));
+// let scrollHandler = null;
+// const handleHeaderScroll = () => {
+// 	const header = document.getElementById('header');
+// 	if (!header) return;
+// 	if (window.scrollY > 100) {
+// 		header.classList.add('scrolled-menu');
+// 	} else {
+// 		header.classList.remove('scrolled-menu');
+// 	}
+// };
+// const initHeaderScroll = () => {
+// 	const header = document.getElementById('header');
+// 	if (!header) return;
+// 	if (scrollHandler) {
+// 		window.removeEventListener('scroll', scrollHandler);
+// 		scrollHandler = null;
+// 	}
+// 	if (document.documentElement.clientWidth > 991) {
+// 		scrollHandler = handleHeaderScroll;
+// 		window.addEventListener('scroll', scrollHandler);
+// 		handleHeaderScroll();
+// 	} else {
+// 		header.classList.remove('scrolled-menu');
+// 	}
+// };
+// const debounce = (func, wait) => {
+// 	let timeout;
+// 	return function executedFunction(...args) {
+// 		const later = () => {
+// 			clearTimeout(timeout);
+// 			func(...args);
+// 		};
+// 		clearTimeout(timeout);
+// 		timeout = setTimeout(later, wait);
+// 	};
+// };
+// initHeaderScroll();
+// window.addEventListener('resize', debounce(initHeaderScroll, 100));
 
 // меню бургер
 const templateMenu = document.querySelector('.menu');
