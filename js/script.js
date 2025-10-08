@@ -62,21 +62,14 @@ if (templateMenu) {
 }
 
 // темная тема
-const themeSwitch = document.querySelector('.switch > input');
-
-	if (themeSwitch.checked) {
-		document.body.classList.add('dark');
-	} else {
-		document.body.classList.remove('dark');
-	}
-
-	themeSwitch.addEventListener('input', () => {
-			if (themeSwitch.checked) {
-				document.body.classList.add('dark');
-			} else {
-				document.body.classList.remove('dark');
-			}
-		});
+const theme = document.querySelector('.switch > input');
+if (theme) {
+	const switching = () => {
+		document.body.classList.toggle('dark', theme.checked);
+	};
+	switching();
+	theme.addEventListener('input', switching);
+}
 
 // одинаковая длина вложенных пунктов меню в хедере
 document.querySelectorAll('[data-inner-menu]').forEach((menu) => {
@@ -136,142 +129,195 @@ if (counter) {
 }
 
 // Калькулятор
-const ranges = document.querySelectorAll('.calculator input[type="range"]');
-const numbers = document.querySelectorAll('.calculator input[type="text"]');
-if (ranges.length && numbers.length) {
-	const spaceDigits = (number) => {
-		return number.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+// Оформление ползунков
+const ranges = document.querySelectorAll('.calculator__range');
+if (ranges.length) {
+	const rangesInstances = {}; // инициализированные ползунки
+	const rangesConfigs = {
+		'.calculator__sum-slider': {
+			start: 1350000,
+			step: 1000,
+			range: { min: 0, max: 3000000 },
+			format: { decimals: 0, thousand: ' ', suffix: '' },
+		},
+		'.calculator__days-slider': {
+			start: 160,
+			step: 1,
+			range: { min: 1, max: 365 },
+			format: { decimals: 0 },
+		},
+		'.calculator__percent-slider': {
+			start: 0.15,
+			step: 0.01,
+			range: { min: 0.1, '50%': 0.25, max: 0.5 },
+			format: { decimals: 2 },
+		},
 	};
-
-	const updateResult = () => {
-		const RESULTOUTPUT = document.querySelector(
-			'[data-input="calculatorResultInput"]'
-		);
-		const SUMOUTPUT = document.querySelector(
-			'[data-input="calculatorSumInput"]'
-		);
-		const DAYSOUTPUT = document.querySelector(
-			'[data-input="calculatorDaysInput"]'
-		);
-		const PERCENTOUTPUT = document.querySelector(
-			'[data-input="calculatorPercentInput"]'
-		);
-		const DIFFERENCEOUTPUT = document.querySelector(
-			'[data-input="calculatorDifferenceInput"]'
-		);
-
-		const sumInput = document.getElementById('calculatorSumInput');
-		const daysInput = document.getElementById('calculatorDaysInput');
-		const percentInput = document.getElementById('calculatorPercentInput');
-
-		if (sumInput && daysInput && percentInput) {
-			const sumValue = Number(sumInput.value.replace(/ /g, ''));
-			const daysValue = Number(daysInput.value);
-			const percentValue = Number(percentInput.value);
-			const s = (sumValue / 100) * percentValue;
-			const differenceValue = s * daysValue;
-			const resultValue = sumValue + Number(differenceValue);
-
-			RESULTOUTPUT.innerText = spaceDigits(
-				resultValue.toFixed(2).replace(/\.00$/, '')
-			);
-			SUMOUTPUT.innerText = spaceDigits(sumValue);
-			DAYSOUTPUT.innerText = daysValue;
-			PERCENTOUTPUT.innerText = percentValue;
-			DIFFERENCEOUTPUT.innerText = spaceDigits(
-				differenceValue.toFixed(2).replace(/\.00$/, '')
-			);
-		}
+	const createSlider = (range, config) => {
+		const instance = noUiSlider.create(range, {
+			...config,
+			tooltips: true,
+			connect: 'lower',
+			format: wNumb(config.format),
+		});
+		const key = range.classList[1];
+		rangesInstances[key] = instance;
 	};
-
-	ranges.forEach((input) => {
-		const output = input.parentElement.querySelector('input[type="text"]');
-		const min = Number(input.min);
-		const max = Number(input.max);
-		const decorationInput = () => {
-			const value = Number(input.value);
-			const valuePercent = `${100 - ((max - value) / (max - min)) * 100}%`;
-			input.style.backgroundSize = `${valuePercent} 100%`;
-		};
-		const valueInputToOutput = () => {
-			output.value = spaceDigits(input.value);
-		};
-		const valueOutputToInput = () => {
-			const valueNum = Number(String(output.value).replace(/ /g, ''));
-			if (valueNum >= min && valueNum <= max) {
-				input.value = valueNum;
-				output.classList.remove('--error');
-			} else {
-				output.classList.add('--error');
-			}
-		};
-
-		valueInputToOutput();
-		decorationInput();
-		updateResult();
-
-		input.addEventListener('input', (e) => {
-			valueInputToOutput();
-			decorationInput();
-			updateResult();
-
-			if (e.target.matches('.calculator__percent-slider')) {
-				const range = Number(e.target.max) - Number(e.target.min);
-				// const current = (Number(e.target.value) * 100) / range;
-				const value = e.target.value;
-				const percent = (
-					((Number(value) - Number(e.target.min)) * 100) /
-					range
-				).toFixed(2);
-				console.log(`диапазон: ${range}`);
-				console.log(`значение: ${value}`);
-				console.log(`процент: ${percent}`);
-			}
-		});
-		output.addEventListener('input', () => {
-			valueOutputToInput();
-			decorationInput();
-			updateResult();
-		});
-		output.addEventListener('keypress', function (e) {
-			const pattern = new RegExp('^' + this.pattern + '$');
-			const testValue = this.value + e.key;
-			if (!pattern.test(testValue)) {
-				e.preventDefault();
-			}
-			valueOutputToInput();
-			decorationInput();
-		});
-		output.addEventListener('focusin', () => {
-			output.value = Number(String(output.value).replace(/ /g, ''));
-		});
-		output.addEventListener('focusout', () => {
-			output.value = spaceDigits(output.value);
+	ranges.forEach((range) => {
+		Object.entries(rangesConfigs).forEach(([selector, config]) => {
+			if (range.matches(selector)) createSlider(range, config);
 		});
 	});
+
+	console.log('Доступные экземпляры:', Object.keys(rangesInstances));
+
+	// console.log(rangesInstances['calculator__sum-slider'].set(20000));
+
+	// форматирование для полей
+	const sumInput = document.getElementById('calculatorSumInput');
+	const daysInput = document.getElementById('calculatorDaysInput');
+	const percentInput = document.getElementById('calculatorPercentInput');
+	if (sumInput && percentInput) {
+		// 7 520 000 ₽
+		const priceFormatter = new Intl.NumberFormat('ru-RU', {
+			style: 'currency',
+			currency: 'RUB',
+			maximumFractionDigits: 0,
+		});
+		// 4,75 %
+		const percentFormatter = new Intl.NumberFormat('ru-RU', {
+			style: 'percent',
+			maximumFractionDigits: 2,
+		});
+		function updateInput(input) {
+			if (input.matches('#calculatorSumInput')) {
+				const sumInput = input;
+				sumInput.value = priceFormatter.format(sumInput.value);
+			}
+
+			if (input.matches('#calculatorPercentInput')) {
+				const percentInput = input;
+				percentInput.value = percentFormatter.format(percentInput.value / 100);
+			}
+		}
+		updateInput(sumInput);
+		updateInput(percentInput);
+		// ввод
+	}
 }
 
-// const calculatorSumSlider = document.getElementById('calculatorSumSlider');
-// const calculatorSumInput = document.getElementById('calculatorSumInput');
+// Проброс значений между полями и ползунками
 
-// calculatorSumSlider.addEventListener('input', () => {
-// 	calculatorSumInput.value = calculatorSumSlider.value;
-// });
+const sumRange = document.querySelector('.calculator__sum-slider');
+const daysRange = document.querySelector('.calculator__days-slider');
+const percentRange = document.querySelector('.calculator__percent-slider');
 
-// calculatorSumInput.addEventListener('input', () => {
-// 	calculatorSumSlider.value = calculatorSumInput.value;
-// });
+const updateValue = (get, set) => {
+	get.value = set.value;
+};
 
-// const calculatorDaysSlider = document.getElementById('calculatorDaysSlider');
-// const calculatorDaysInput = document.getElementById('calculatorDaysInput');
+// Калькулятор.
+// const ranges = document.querySelectorAll('.calculator input[type="range"]');
+// const numbers = document.querySelectorAll('.calculator input[type="text"]');
+// if (ranges.length && numbers.length) {
+// 	const spaceDigits = (number) => {
+// 		return number.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+// 	};
 
-// calculatorDaysSlider.addEventListener('input', () => {
-// 	calculatorDaysInput.value = calculatorDaysSlider.value;
-// });
+// 	const updateResult = () => {
+// 		const RESULTOUTPUT = document.querySelector(
+// 			'[data-input="calculatorResultInput"]'
+// 		);
+// 		const SUMOUTPUT = document.querySelector(
+// 			'[data-input="calculatorSumInput"]'
+// 		);
+// 		const DAYSOUTPUT = document.querySelector(
+// 			'[data-input="calculatorDaysInput"]'
+// 		);
+// 		const PERCENTOUTPUT = document.querySelector(
+// 			'[data-input="calculatorPercentInput"]'
+// 		);
+// 		const DIFFERENCEOUTPUT = document.querySelector(
+// 			'[data-input="calculatorDifferenceInput"]'
+// 		);
 
-// calculatorDaysInput.addEventListener('input', () => {
-// 	calculatorDaysSlider.value = calculatorDaysInput.value;
-// });
+// 		const sumInput = document.getElementById('calculatorSumInput');
+// 		const daysInput = document.getElementById('calculatorDaysInput');
+// 		const percentInput = document.getElementById('calculatorPercentInput');
+
+// 		if (sumInput && daysInput && percentInput) {
+// 			const sumValue = Number(sumInput.value.replace(/ /g, ''));
+// 			const daysValue = Number(daysInput.value);
+// 			const percentValue = Number(percentInput.value);
+// 			const s = (sumValue / 100) * percentValue;
+// 			const differenceValue = s * daysValue;
+// 			const resultValue = sumValue + Number(differenceValue);
+
+// 			RESULTOUTPUT.innerText = spaceDigits(
+// 				resultValue.toFixed(2).replace(/\.00$/, '')
+// 			);
+// 			SUMOUTPUT.innerText = spaceDigits(sumValue);
+// 			DAYSOUTPUT.innerText = daysValue;
+// 			PERCENTOUTPUT.innerText = percentValue;
+// 			DIFFERENCEOUTPUT.innerText = spaceDigits(
+// 				differenceValue.toFixed(2).replace(/\.00$/, '')
+// 			);
+// 		}
+// 	};
+
+// 	ranges.forEach((input) => {
+// 		const output = input.parentElement.querySelector('input[type="text"]');
+// 		const min = Number(input.min);
+// 		const max = Number(input.max);
+// 		const decorationInput = () => {
+// 			const value = Number(input.value);
+// 			const valuePercent = `${100 - ((max - value) / (max - min)) * 100}%`;
+// 			input.style.backgroundSize = `${valuePercent} 100%`;
+// 		};
+// 		const valueInputToOutput = () => {
+// 			output.value = spaceDigits(input.value);
+// 		};
+// 		const valueOutputToInput = () => {
+// 			const valueNum = Number(String(output.value).replace(/ /g, ''));
+// 			if (valueNum >= min && valueNum <= max) {
+// 				input.value = valueNum;
+// 				output.classList.remove('--error');
+// 			} else {
+// 				output.classList.add('--error');
+// 			}
+// 		};
+
+// 		valueInputToOutput();
+// 		decorationInput();
+// 		updateResult();
+
+// 		input.addEventListener('input', (e) => {
+// 			valueInputToOutput();
+// 			decorationInput();
+// 			updateResult();
+// 		});
+// 		output.addEventListener('input', () => {
+// 			valueOutputToInput();
+// 			decorationInput();
+// 			updateResult();
+// 		});
+// 		output.addEventListener('keypress', function (e) {
+// 			const pattern = new RegExp('^' + this.pattern + '$');
+// 			const testValue = this.value + e.key;
+// 			if (!pattern.test(testValue)) {
+// 				e.preventDefault();
+// 			}
+// 			valueOutputToInput();
+// 			decorationInput();
+// 		});
+// 		output.addEventListener('focusin', () => {
+// 			output.value = Number(String(output.value).replace(/ /g, ''));
+// 		});
+// 		output.addEventListener('focusout', () => {
+// 			output.value = spaceDigits(output.value);
+// 		});
+// 	});
+// }
 
 // скрытие текста в блоке main-conditions
 const conditions = document.querySelector('.main-conditions');
@@ -408,8 +454,6 @@ if (document.getElementById('map')) {
 		);
 	}
 }
-
-
 
 // Открывашка текста
 const expandButton = document.querySelector('.expand-button');
