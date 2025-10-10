@@ -834,16 +834,30 @@
 	.load-more__btn {
 		margin-bottom: 60px;
 	}
+	.loan__banner {
+		padding: 50px 0 20px;
+	}
 	.loan__banner h1 br {
         display: none;
+    }
+	.loan__btn {
+        display: none;
+    }
+	.loan-item__btns {
+        row-gap: 10px;
     }
     .loan__how-get {
         padding: 60px 0;
     }
-    
+	.loan__how-get-items {
+        gap: 2px;
+    }
     .loan__how-get-item h3 {
         font-size: 24px;
     }
+	.loan .loan__how-get {
+		padding: 60px 0 20px;
+	}
     .loan__docs {
         padding: 60px 0 40px;
     }
@@ -853,12 +867,28 @@
 	.loan-application {
 		padding-bottom: 40px;
 	}
+	.loan__docs-items {
+        row-gap: 10px;
+    }
+	.loan__calculator {
+		padding-bottom: 40px;
+	}
+	.loan__info {
+		padding-top: 40px;
+		border-top: 1px solid var(--razdeliteli-color-border);
+	}
+	.loan .about-company-link {
+		margin-bottom: 40px;
+	}
 	.lombard__banner {
         padding: 50px 0 20px;
     }
     .banner h1 {
         font-size: 30px;
     }
+	.treatment-advantages {
+		padding: 60px 0;
+	}
     .application__form {
         padding: 30px 30px 50px;
     }
@@ -1078,7 +1108,7 @@
 	.loan__banner {
         padding: 60px 0 50px;
     }
-    .banner h1,
+	
     .treatment-advantages__title {
         font-size: 45px;
     }

@@ -178,6 +178,10 @@
     background: var(--cveta-brenda-color-primory-1);
 }
 
+.dark .loan__info {
+	border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+}
+
 .dark .main-map__form {
 	background: var(--cveta-brenda-color-primory-2);
 }

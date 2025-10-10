@@ -4,13 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/nouislider.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
-
 		<link rel="stylesheet" href="css/adaptive.css" />
 		<link rel="stylesheet" href="css/dark.css" />
 		<link rel="stylesheet" href="css/dop.css" />
-
-		<title>SPfinans</title>
+		<link rel="stylesheet" href="css/dop-oxana.css "/>
+		<title>SPFinans</title>
 	</head>
 	<body class="body lombard">
 		<header class="header" id="header">
@@ -580,7 +580,9 @@
 												</li>
 
 												<li>
-													<a class="menu__link" href="./lombard.html">Ломбард</a>
+													<a class="menu__link" href="./lombard.html">
+														Ломбард
+													</a>
 												</li>
 
 												<li>
@@ -630,7 +632,10 @@
 																	</a>
 																</li>
 																<li>
-																	<a class="menu__link-level" href="#">
+																	<a
+																		class="menu__link-level"
+																		href="./reviews-page.html"
+																	>
 																		Отзывы
 																	</a>
 																</li>
@@ -648,7 +653,10 @@
 																	<a class="menu__link-level" href="#">FAQ</a>
 																</li>
 																<li>
-																	<a class="menu__link-level" href="#">
+																	<a
+																		class="menu__link-level"
+																		href="./advertisements.html"
+																	>
 																		Объявления
 																	</a>
 																</li>
@@ -687,38 +695,47 @@
 		</header>
 
 		<main class="main">
-			<!-- <section class="lombard__banner banner">
+			<section class="lombard__banner banner">
+				<div class="banner__img">
+					<picture>
+						<source media="(max-width: 575px)" srcset="img/lombard-mobile.jpg">
+						<img src="img/lombard-banner.jpg"/>
+					</picture>
+				</div>
 				<div class="container">
-					<div class="row align-items-center lombard__banner-wrapper">
-						<div class="col-12 col-lg-6 col-xl-5">
-							<h1>«Евроломбард»</h1>
-							<p class="banner__text">Вам срочно нужны деньги?
-								Нет возможности взять кредит в банке?
-								Друзья и родственники не хотят давать в долг?<br><br>
+					<div class="banner__inner">
+						<div class="row align-items-center lombard__banner-wrapper">
+							<div class="col-12 col-lg-6 col-xl-5">
+								<h1>«Евроломбард»</h1>
+								<p class="banner__text">Вам срочно нужны деньги?
+									Нет возможности взять кредит в банке?
+									Друзья и родственники не хотят давать в долг?<br><br>
+									
+									Приходите в ООО ломбард «Евроломбард»!
+									Мы без проблем выдадим вам требующуюся сумму денег под небольшой процент.
+									Срок, на который можно взять деньги в долг, вы выбираете сами.
+								</p>
 								
-								Приходите в ООО ломбард «Евроломбард»!
-								Мы без проблем выдадим вам требующуюся сумму денег под небольшой процент.
-								Срок, на который можно взять деньги в долг, вы выбираете сами.
-							</p>
+							</div>
 							
-						</div>
-						
-						<div class="col-12 col-lg-6 col-xl-7">
-							<div class="application__form">
-								<h3>Заявка на займ</h3>
-								<form class="d-flex flex-column application__form-wrapper" id="">
-									<input type="text" name="" id="" placeholder="Имя" required />
-									<input type="tel" name="" id="" placeholder="+7" required />
-									<input type="text" name="" id="" placeholder="Комментарий" />
-									<input class="btn" type="submit" value="Оставить заявку" />
-								</form>
+							<div class="col-12 col-lg-6 col-xl-7">
+								<div class="application__form">
+									<h3>Заявка на займ</h3>
+									<form class="d-flex flex-column application__form-wrapper" id="">
+										<input type="text" name="" id="" placeholder="Имя" required />
+										<input type="tel" name="" id="" placeholder="+7" required />
+										<input type="text" name="" id="" placeholder="Комментарий" />
+										<input class="btn" type="submit" value="Оставить заявку" />
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
+					
 
 					
 				</div>
-			</section> -->
+			</section>
 
 			<section class="lombard__advantages">
 				<div class="container">
@@ -1445,6 +1462,9 @@
 			</div>
 		</footer>
 
+		<script src="js/cleave.min.js"></script>
+		<script src="js/wNumb.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script
 			src="https://api-maps.yandex.ru/3.0/?apikey=41d880d2-9128-4f13-b1e3-28e243c3a9ef&lang=ru_RU"
