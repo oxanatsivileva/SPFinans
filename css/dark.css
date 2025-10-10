@@ -125,6 +125,8 @@
 	background: var(--fony--vspomogatelnye-cveta-background-white-dark);
 }
 
+
+
 .dark .main-conditions::before {
 	opacity: 0.1;
 }
@@ -142,15 +144,38 @@
 	);
 }
 
+.dark .lot__items .lot__item {
+	background: var(--fony--vspomogatelnye-cveta-background-white-dark);
+}
 
-@media (max-width: 991px) {
-	.dark .main-conditions__more {
-		background: linear-gradient(
-			180deg,
-			rgba(60, 94, 105, 0) 0%,
-			rgba(60, 94, 105, 1) 60%
-		);
-	}
+.dark .lot__items .lot__item .btn {
+	border: 2px solid var(--cveta-brenda-color-primory-2);
+	background: transparent;
+}
+
+.dark .lot__items .lot__item .btn:hover {
+	background-color: var(--cveta-brenda-color-primory-2);
+	color: var(--fony--vspomogatelnye-cveta-background-white);
+}
+
+.dark .load-more__btn,
+.dark .card-btn {
+	color: var(--fony--vspomogatelnye-cveta-background-white);
+}
+
+.dark.loan .loan__how-get {
+    border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+    border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+}
+
+.dark .loan__how-get-item,
+.dark .treatment-advantages__item {
+    background: var(--fony--vspomogatelnye-cveta-background-white-dark);
+}
+
+.dark .loan__docs-item,
+.dark .loan__docs-action {
+    background: var(--cveta-brenda-color-primory-1);
 }
 
 .dark .main-map__form {
@@ -280,6 +305,45 @@
 	background: var(--fony--vspomogatelnye-cveta-background-white);
 }
 
+.dark .calculator__range .noUi-handle {
+    background: var(--fony--vspomogatelnye-cveta-background-white);
+}
+.dark .calculator__range .noUi-connect {
+    border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-white);
+}
+
+.dark .banner__text {
+	opacity: 1;
+}
+.dark .lombard__banner {
+	background: var(--fony--vspomogatelnye-cveta-background-medium-grey-dark);
+}
+ 
+.dark .lombard__advantages-text,
+.dark .property__links-item ul li {
+	color: var(--fony--vspomogatelnye-cveta-background-white);    
+}
+ 
+.dark .lombard__how-work-item,
+.dark .property__links-item,
+.dark .documents__item {
+	background: var(--fony--vspomogatelnye-cveta-background-white-dark);
+}
+
+.dark.property .main-map {
+    background-color: transparent;
+}
+
+.dark .accordion summary,
+.dark .documents__item {
+	color: var(--fony--vspomogatelnye-cveta-background-white);   
+}
+
+.dark .accordion summary::before, 
+.dark .accordion summary::after {
+    background: var(--fony--vspomogatelnye-cveta-background-white);   
+}
+
 @media (max-width: 1199px) {
 	.dark .menu__list-level {
 		background-color: transparent;
@@ -300,12 +364,17 @@
 	.dark .menu__icon {
 		background-color: rgba(255, 255, 255, 0.1);
 	}
+	.dark .main-conditions__more {
+		background: linear-gradient(
+			180deg,
+			rgba(60, 94, 105, 0) 0%,
+			rgba(60, 94, 105, 1) 60%
+		);
+	}
 }
 
 @media (max-width: 767px) {
-	.dark .main-page__ads,
-	.dark .main-page__services,
-	.dark .main-calculator {
-		background: var(--fony--vspomogatelnye-cveta-background-white-dark);
-	}
+	.dark .main-page__services-items {
+        border-top: none;
+    }
 }

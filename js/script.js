@@ -88,6 +88,8 @@ document.querySelectorAll('[data-inner-menu]').forEach((menu) => {
 
 // ХЭДЕР КОНЕЦ
 
+// ГЛАВНАЯ
+
 // количество слайдов в карусели на главной
 let counter = document.querySelector('.main-hero__counter');
 let myCarousel = document.querySelector('#carouselExampleControls');
@@ -129,15 +131,16 @@ if (counter) {
 }
 
 // Калькулятор
-// Оформление ползунков
 const ranges = document.querySelectorAll('.calculator__range');
 if (ranges.length) {
+	// Оформление ползунков
+	const isMobile = window.innerWidth < 992;
 	const rangesInstances = {}; // инициализированные ползунки
 	const rangesConfigs = {
 		'.calculator__sum-slider': {
 			start: 1350000,
-			step: 1000,
-			range: { min: 0, max: 3000000 },
+			step: 1,
+			range: { min: 0, '50%': isMobile ? 750000 : 1500000, max: 3000000 },
 			format: { decimals: 0, thousand: ' ', suffix: '' },
 		},
 		'.calculator__days-slider': {
@@ -156,7 +159,7 @@ if (ranges.length) {
 	const createSlider = (range, config) => {
 		const instance = noUiSlider.create(range, {
 			...config,
-			tooltips: true,
+			// tooltips: true,
 			connect: 'lower',
 			format: wNumb(config.format),
 		});
@@ -169,229 +172,209 @@ if (ranges.length) {
 		});
 	});
 
-	console.log('Доступные экземпляры:', Object.keys(rangesInstances));
+	const form = document.querySelector('.calculator');
+	if (form) {
+		// форматирование для полей
+		const sumInput = form.querySelector('#calculatorSumInput');
+		const daysInput = form.querySelector('#calculatorDaysInput');
+		const percentInput = form.querySelector('#calculatorPercentInput');
+		if (sumInput && daysInput && percentInput) {
+			const cleavePriceSetting = {
+				numeral: true,
+				numeralThousandsGroupStyle: 'thousand',
+				delimiter: ' ',
+			};
+			const cleaveSum = new Cleave(sumInput, cleavePriceSetting);
+			const cleaveDays = new Cleave(daysInput, { numeral: true });
+			const cleavePercent = new Cleave(percentInput, cleavePriceSetting);
+			calculation();
 
-	// console.log(rangesInstances['calculator__sum-slider'].set(20000));
+			// Проброс значений между полями и ползунками
+			form.addEventListener('input', function (e) {
+				let value = 0;
+				if (e.target.matches('#calculatorSumInput')) {
+					value = +cleaveSum.getRawValue();
+					rangesInstances['calculator__sum-slider'].set(value);
+					if (value > e.target.max) {
+						cleaveSum.setRawValue(e.target.max);
+					}
+				} else if (e.target.matches('#calculatorDaysInput')) {
+					value = +cleaveDays.getRawValue();
+					rangesInstances['calculator__days-slider'].set(value);
+					if (value > e.target.max) {
+						cleaveDays.setRawValue(e.target.max);
+					}
+				} else if (e.target.matches('#calculatorPercentInput')) {
+					value = +cleavePercent.getRawValue();
+					rangesInstances['calculator__percent-slider'].set(value);
+					if (value > e.target.max) {
+						cleavePercent.setRawValue(e.target.max);
+					}
+				}
+				calculation();
+			});
+			Object.keys(rangesInstances).forEach((range) => {
+				rangesInstances[range].on('slide', () => {
+					switch (range) {
+						case 'calculator__sum-slider':
+							cleaveSum.setRawValue(parseInt(rangesInstances[range].get(true)));
+							break;
+						case 'calculator__days-slider':
+							cleaveDays.setRawValue(
+								parseInt(rangesInstances[range].get(true))
+							);
+							break;
+						case 'calculator__percent-slider':
+							cleavePercent.setRawValue(rangesInstances[range].get());
+							break;
+					}
+					calculation();
+				});
+			});
 
-	// форматирование для полей
-	const sumInput = document.getElementById('calculatorSumInput');
-	const daysInput = document.getElementById('calculatorDaysInput');
-	const percentInput = document.getElementById('calculatorPercentInput');
-	if (sumInput && percentInput) {
-		// 7 520 000 ₽
-		const priceFormatter = new Intl.NumberFormat('ru-RU', {
-			style: 'currency',
-			currency: 'RUB',
-			maximumFractionDigits: 0,
-		});
-		// 4,75 %
-		const percentFormatter = new Intl.NumberFormat('ru-RU', {
-			style: 'percent',
-			maximumFractionDigits: 2,
-		});
-		function updateInput(input) {
-			if (input.matches('#calculatorSumInput')) {
-				const sumInput = input;
-				sumInput.value = priceFormatter.format(sumInput.value);
+			// Подсчёт
+			function calculation() {
+				const sumValue = +cleaveSum.getRawValue();
+				const daysValue = +cleaveDays.getRawValue();
+				const percentValue = +cleavePercent.getRawValue();
+				const s = (sumValue / 100) * percentValue;
+				const differenceValue = s * daysValue;
+				const resultValue = sumValue + Number(differenceValue);
+				updateResult(
+					sumValue,
+					daysValue,
+					percentValue,
+					differenceValue,
+					resultValue
+				);
 			}
 
-			if (input.matches('#calculatorPercentInput')) {
-				const percentInput = input;
-				percentInput.value = percentFormatter.format(percentInput.value / 100);
+			// Вставка значений
+			function updateResult(
+				sumValue,
+				daysValue,
+				percentValue,
+				differenceValue,
+				resultValue
+			) {
+				const RESULTOUTPUT = document.querySelector(
+					'[data-input="calculatorResultInput"]'
+				);
+				const SUMOUTPUT = document.querySelector(
+					'[data-input="calculatorSumInput"]'
+				);
+				const DAYSOUTPUT = document.querySelector(
+					'[data-input="calculatorDaysInput"]'
+				);
+				const PERCENTOUTPUT = document.querySelector(
+					'[data-input="calculatorPercentInput"]'
+				);
+				const DIFFERENCEOUTPUT = document.querySelector(
+					'[data-input="calculatorDifferenceInput"]'
+				);
+				const priceFormatter = new Intl.NumberFormat('ru-RU', {
+					style: 'currency',
+					currency: 'RUB',
+					maximumFractionDigits: 0,
+				});
+				const percentFormatter = new Intl.NumberFormat('ru-RU', {
+					style: 'percent',
+					maximumFractionDigits: 2,
+				});
+				RESULTOUTPUT.innerText = priceFormatter.format(resultValue);
+				SUMOUTPUT.innerText = sumValue;
+				DAYSOUTPUT.innerText = daysValue;
+				PERCENTOUTPUT.innerText = percentFormatter.format(percentValue / 100);
+				DIFFERENCEOUTPUT.innerText = priceFormatter.format(differenceValue);
 			}
 		}
-		updateInput(sumInput);
-		updateInput(percentInput);
-		// ввод
 	}
+
+	// Обработчик ресайза для переинициализации
+	let resizeTimeout;
+	window.addEventListener('resize', () => {
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(() => {
+			if (window.innerWidth < 992 !== isMobile) {
+				location.reload(); // или переинициализация слайдеров
+			}
+		}, 250);
+	});
 }
-
-// Проброс значений между полями и ползунками
-
-const sumRange = document.querySelector('.calculator__sum-slider');
-const daysRange = document.querySelector('.calculator__days-slider');
-const percentRange = document.querySelector('.calculator__percent-slider');
-
-const updateValue = (get, set) => {
-	get.value = set.value;
-};
-
-// Калькулятор.
-// const ranges = document.querySelectorAll('.calculator input[type="range"]');
-// const numbers = document.querySelectorAll('.calculator input[type="text"]');
-// if (ranges.length && numbers.length) {
-// 	const spaceDigits = (number) => {
-// 		return number.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-// 	};
-
-// 	const updateResult = () => {
-// 		const RESULTOUTPUT = document.querySelector(
-// 			'[data-input="calculatorResultInput"]'
-// 		);
-// 		const SUMOUTPUT = document.querySelector(
-// 			'[data-input="calculatorSumInput"]'
-// 		);
-// 		const DAYSOUTPUT = document.querySelector(
-// 			'[data-input="calculatorDaysInput"]'
-// 		);
-// 		const PERCENTOUTPUT = document.querySelector(
-// 			'[data-input="calculatorPercentInput"]'
-// 		);
-// 		const DIFFERENCEOUTPUT = document.querySelector(
-// 			'[data-input="calculatorDifferenceInput"]'
-// 		);
-
-// 		const sumInput = document.getElementById('calculatorSumInput');
-// 		const daysInput = document.getElementById('calculatorDaysInput');
-// 		const percentInput = document.getElementById('calculatorPercentInput');
-
-// 		if (sumInput && daysInput && percentInput) {
-// 			const sumValue = Number(sumInput.value.replace(/ /g, ''));
-// 			const daysValue = Number(daysInput.value);
-// 			const percentValue = Number(percentInput.value);
-// 			const s = (sumValue / 100) * percentValue;
-// 			const differenceValue = s * daysValue;
-// 			const resultValue = sumValue + Number(differenceValue);
-
-// 			RESULTOUTPUT.innerText = spaceDigits(
-// 				resultValue.toFixed(2).replace(/\.00$/, '')
-// 			);
-// 			SUMOUTPUT.innerText = spaceDigits(sumValue);
-// 			DAYSOUTPUT.innerText = daysValue;
-// 			PERCENTOUTPUT.innerText = percentValue;
-// 			DIFFERENCEOUTPUT.innerText = spaceDigits(
-// 				differenceValue.toFixed(2).replace(/\.00$/, '')
-// 			);
-// 		}
-// 	};
-
-// 	ranges.forEach((input) => {
-// 		const output = input.parentElement.querySelector('input[type="text"]');
-// 		const min = Number(input.min);
-// 		const max = Number(input.max);
-// 		const decorationInput = () => {
-// 			const value = Number(input.value);
-// 			const valuePercent = `${100 - ((max - value) / (max - min)) * 100}%`;
-// 			input.style.backgroundSize = `${valuePercent} 100%`;
-// 		};
-// 		const valueInputToOutput = () => {
-// 			output.value = spaceDigits(input.value);
-// 		};
-// 		const valueOutputToInput = () => {
-// 			const valueNum = Number(String(output.value).replace(/ /g, ''));
-// 			if (valueNum >= min && valueNum <= max) {
-// 				input.value = valueNum;
-// 				output.classList.remove('--error');
-// 			} else {
-// 				output.classList.add('--error');
-// 			}
-// 		};
-
-// 		valueInputToOutput();
-// 		decorationInput();
-// 		updateResult();
-
-// 		input.addEventListener('input', (e) => {
-// 			valueInputToOutput();
-// 			decorationInput();
-// 			updateResult();
-// 		});
-// 		output.addEventListener('input', () => {
-// 			valueOutputToInput();
-// 			decorationInput();
-// 			updateResult();
-// 		});
-// 		output.addEventListener('keypress', function (e) {
-// 			const pattern = new RegExp('^' + this.pattern + '$');
-// 			const testValue = this.value + e.key;
-// 			if (!pattern.test(testValue)) {
-// 				e.preventDefault();
-// 			}
-// 			valueOutputToInput();
-// 			decorationInput();
-// 		});
-// 		output.addEventListener('focusin', () => {
-// 			output.value = Number(String(output.value).replace(/ /g, ''));
-// 		});
-// 		output.addEventListener('focusout', () => {
-// 			output.value = spaceDigits(output.value);
-// 		});
-// 	});
-// }
 
 // скрытие текста в блоке main-conditions
-const conditions = document.querySelector('.main-conditions');
-let margin = 0;
-if (document.documentElement.clientWidth < 992) {
-	margin = 180;
-}
-if (conditions) {
-	const conditionsInner = document.querySelector('.main-conditions__inner');
-	const row = conditions.querySelector('[data-height]');
-	const list = conditions.querySelector('.main-conditions__list');
-	const span = conditions.querySelector('.main-conditions__more span');
-	if (conditionsInner && row && list && span) {
-		const dataHeight = +row.dataset.height;
-		const height = conditionsInner.offsetHeight;
-		const text = span.innerText;
-		conditionsInner.style.height = `${row.offsetTop + dataHeight + margin}px`;
-		span.style.marginLeft = `${
-			list.offsetLeft +
-			document.querySelector('.main-conditions__inner > .container').offsetLeft
-		}px`;
-		window.addEventListener('resize', () => {
-			span.style.marginLeft = `${
-				list.offsetLeft +
-				document.querySelector('.main-conditions__inner > .container')
-					.offsetLeft
+if (document.querySelector('[data-height]')) {
+	const conditions = document.querySelector('.main-conditions');
+	let marginMobile = 0;
+
+	if (document.documentElement.clientWidth < 992) {
+		marginMobile = 180;
+	}
+
+	if (conditions) {
+		const conditionsInner = conditions.querySelector('.main-conditions__inner');
+		const row = conditions.querySelector('[data-height]');
+		const btn = conditions.querySelector('.main-conditions__more span');
+		if (conditionsInner && row && btn) {
+			const dataHeight = +row.dataset.height;
+			const height = conditionsInner.offsetHeight;
+			const text = btn.innerText;
+			conditionsInner.style.height = `${
+				row.offsetTop + dataHeight + marginMobile
 			}px`;
-		});
-		span.addEventListener('click', (e) => {
-			if (!e.target.closest('.main-conditions--open')) {
-				conditionsInner.style.height = `${height}px`;
-				conditions.classList.add('main-conditions--open');
-				e.target.innerText = 'Свернуть';
-			} else {
-				conditionsInner.style.height = `${row.offsetTop + dataHeight}px`;
-				conditions.classList.remove('main-conditions--open');
-				e.target.innerText = text;
-			}
-		});
+			btn.addEventListener('click', (e) => {
+				if (!e.target.closest('.main-conditions--open')) {
+					conditionsInner.style.height = `${height}px`;
+					conditions.classList.add('main-conditions--open');
+					e.target.innerText = 'Свернуть';
+				} else {
+					conditionsInner.style.height = `${
+						row.offsetTop + dataHeight + marginMobile
+					}px`;
+					conditions.classList.remove('main-conditions--open');
+					e.target.innerText = text;
+				}
+			});
+		}
 	}
 }
 
 // скрытие текста в блоке main-page__reviews
-// document.querySelectorAll('.review__text').forEach((item) => {
-// 	if (item.scrollHeight > item.clientHeight) {
-// 		const INITIAL_TEXT = 'Читать далее';
-// 		const ALTERNATIVE_TEXT = 'Скрыть';
-// 		const more = document.createElement('span');
-// 		const parent = item.closest('.review__item');
-// 		parent.classList.add('review__item--hidden');
-// 		if (more && parent) {
-// 			more.classList.add('review__more');
-// 			more.innerText = INITIAL_TEXT;
-// 			more.addEventListener('click', () => {
-// 				if (item.closest('.review__item--hidden')) {
-// 					parent.classList.remove('review__item--hidden');
-// 					parent.classList.add('review__item--open');
-// 					more.innerText = ALTERNATIVE_TEXT;
-// 				} else {
-// 					parent.classList.remove('review__item--open');
-// 					parent.classList.add('review__item--hidden');
-// 					more.innerText = INITIAL_TEXT;
-// 				}
-// 			});
-// 			parent.append(more);
-// 		}
-// 	}
-// });
+document
+	.querySelectorAll('.reviews-page__section .review__text')
+	.forEach((item) => {
+		if (item.scrollHeight > item.clientHeight) {
+			const INITIAL_TEXT = 'Читать далее';
+			const ALTERNATIVE_TEXT = 'Скрыть';
+			const moreBtn = document.createElement('span');
+			const comment = item.closest('.review__item');
+			comment.classList.add('review__item--hidden');
+			if (moreBtn && comment) {
+				moreBtn.classList.add('review__more');
+				moreBtn.innerText = INITIAL_TEXT;
+				moreBtn.addEventListener('click', () => {
+					if (item.closest('.review__item--hidden')) {
+						comment.classList.remove('review__item--hidden');
+						comment.classList.add('review__item--open');
+						moreBtn.innerText = ALTERNATIVE_TEXT;
+					} else {
+						comment.classList.remove('review__item--open');
+						comment.classList.add('review__item--hidden');
+						moreBtn.innerText = INITIAL_TEXT;
+					}
+				});
+				comment.append(moreBtn);
+			}
+		}
+	});
 
 // скрытие текста в блоке main-page__reviews
 document.querySelectorAll('.review__text').forEach((item) => {
 	if (item.scrollHeight > item.clientHeight) {
 		const parent = item.closest('.review__item');
-		parent.querySelector('.review__more').style.display = 'inline-block';
+		if (parent.querySelector('.review__more')) {
+			parent.querySelector('.review__more').style.display = 'inline-block';
+		}
 		parent.classList.add('review__item--hidden');
 	}
 });
