@@ -9,10 +9,10 @@
 		<link rel="stylesheet" href="css/adaptive.css" />
 		<link rel="stylesheet" href="css/dark.css" />
 		<link rel="stylesheet" href="css/dop.css" />
-		<link rel="stylesheet" href="css/dop-oxana.css "/>
+		<link rel="stylesheet" href="css/dop-oxana.css " />
 		<title>SPFinans</title>
 	</head>
-	<body class="body loan">
+	<body class="body payment-page">
 		<header class="header" id="header">
 			<div class="container">
 				<div class="row">
@@ -404,7 +404,7 @@
 								Личный кабинет
 							</a>
 							<label class="switch">
-								<input type="checkbox" checked/>
+								<input type="checkbox" checked />
 							</label>
 						</div>
 					</div>
@@ -695,822 +695,113 @@
 		</header>
 
 		<main class="main">
-			<section class="loan__banner banner">
-				<div class="banner__img">
-					<img src="img/loan.jpg">
-				</div>
+			<section class="payment">
 				<div class="container">
-					<div class="banner__inner">
-						<div class="row">
-							<div class="col-12">
-								<h1>
-									Деньги под залог недвижимости
-									<br />
-									в Санкт-Петербурге
-								</h1>
-								<a href="#" class="btn loan__btn">Оставить заявку</a>
-							</div>
-						</div>
-						<div class="row loan-item__btns">
-							<div class="col-xl-4 col-lg-6 col-sm-12">
-								<div class="main-hero__btn loan-item__btn">
-									<i>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="32"
-											height="32"
-											fill="none"
-										>
-											<path
-												stroke="#2B454E"
-												stroke-linecap="round"
-												stroke-width="2"
-												d="M7 25 25 7"
-											/>
-											<circle
-												cx="9"
-												cy="9"
-												r="4"
-												stroke="#2B454E"
-												stroke-width="2"
-											/>
-											<circle
-												cx="23"
-												cy="23"
-												r="4"
-												stroke="#2B454E"
-												stroke-width="2"
-											/>
-										</svg>
-									</i>
-									<span>
-										Процентная ставка
-										<br />
-										от 0.10% в день
-									</span>
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-6 col-sm-12">
-								<div class="main-hero__btn loan-item__btn">
-									<i>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="32"
-											height="32"
-											fill="none"
-										>
-											<ellipse
-												cx="16"
-												cy="10"
-												stroke="#2B454E"
-												stroke-width="2"
-												rx="11"
-												ry="4"
-											/>
-											<path
-												stroke="#2B454E"
-												stroke-width="2"
-												d="M27 16c0 2.21-4.925 4-11 4S5 18.21 5 16"
-											/>
-											<path
-												stroke="#2B454E"
-												stroke-width="2"
-												d="M5 10v12c0 2.21 4.925 4 11 4s11-1.79 11-4V10"
-											/>
-										</svg>
-									</i>
-									<span>
-										Сумма займа согласно
-										<br />
-										действующему
-										<br />
-										законодательству
-									</span>
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-6 col-sm-12">
-								<div class="main-hero__btn loan-item__btn">
-									<i>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="32"
-											height="32"
-											fill="none"
-										>
-											<path
-												stroke="#2B454E"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 2.667V8M11 2.667V8M4 13h24"
-											/>
-											<rect
-												width="24"
-												height="24"
-												x="4"
-												y="4"
-												stroke="#2B454E"
-												stroke-width="2"
-												rx="5"
-											/>
-										</svg>
-									</i>
-									<span>
-										Необходимо участие
-										<br />
-										собственника и всего
-										<br />
-										пакета документации
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					
+					<div class="payment__inner">
+						<h1 class="payment__title">
+							Оплата с помощью QR-кодов на расчетные счета в Альфа-банке
+						</h1>
 
-					
+						<div class="row">
+							<div class="col-12 col-xl-6">
+								<p class="payment__text">
+									Уважаемые клиенты! Вы можете произвести оплату по нашему
+									QR-коду в своем мобильном банке (без комиссии).
+									<br />
+									<br />
+									* НАЗНАЧЕНИЕ ПЛАТЕЖА: Оплата по Договору займа за ФИО
+									(клиента) или наименование Юридического лица. НДС не
+									облагается.
+								</p>
+							</div>
+						</div>
+						<ul class="row payment__list gap-3 gap-lg-0">
+							<li class="col-12 col-lg-6 payment__item">
+								<div>
+									<h4>ООО МКК "СПФинанс"</h4>
+									<p>ИНН 2902086112</p>
+									<p>КПП 027845001</p>
+									<p>р/счет 40701810029330000022</p>
+									<p>Филиал "Нижегородский" АО "Альфа-банк"</p>
+									<p>БИК 042202824</p>
+									<a href="#" class="btn">Открыть QR-код</a>
+									<p>корсчет 30101810200000000824</p>
+								</div>
+							</li>
+
+							<li class="col-12 col-lg-6 payment__item">
+								<div>
+									<h4>ООО ломбард "Евроломбард"</h4>
+									<p>ИНН 0273087459</p>
+									<p>КПП 027301001</p>
+									<p>р/сч 40701810529330000014</p>
+									<p>Филиал "Нижегородский" АО "Альфа-банк""</p>
+									<p>БИК 042202824</p>
+									<a href="#" class="btn">Открыть QR-код</a>
+									<p>корсчет 30101810200000000824</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
-			<section class="loan__how-get">
+			<section class="lombard__how-work lombard__how-work--payment">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<div class="title__wrapper">
-								<h2>Как получить займ в компании МКК «СПФинанс»?</h2>
+								<h2>Оплата онлайн в Сбербанке</h2>
 							</div>
 						</div>
-					</div>
-					<div class="loan__how-get-items">
-						<div class="loan__how-get-item">
-							<i>
-								<svg
-									width="60"
-									height="60"
-									viewBox="0 0 60 60"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M15 15V18.75"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M15 26.25V30"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M15 37.5V41.25"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M26.25 15V18.75"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M26.25 26.25V30"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M26.25 37.5V41.25"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M7.5 10.5C7.5 8.84315 8.84315 7.5 10.5 7.5H30.75C32.4069 7.5 33.75 8.84315 33.75 10.5V52.5H7.5V10.5Z"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<path
-										d="M33.75 33C33.75 31.3431 35.0931 30 36.75 30H51.375C53.0319 30 54.375 31.3431 54.375 33V52.5H33.75V33Z"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<path
-										d="M41.25 45.9375C41.25 44.3842 42.5092 43.125 44.0625 43.125V43.125C45.6158 43.125 46.875 44.3842 46.875 45.9375V52.5H41.25V45.9375Z"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-								</svg>
-							</i>
-							<h3>Подъехать в один из наших офисов вашего города</h3>
-						</div>
-						<div class="loan__how-get-item">
-							<i>
-								<svg
-									width="60"
-									height="60"
-									viewBox="0 0 60 60"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M20.625 20.625L39.375 20.625"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M20.625 30L39.375 30"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M20.625 39.375L30 39.375"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M11.25 10.5C11.25 8.84315 12.5931 7.5 14.25 7.5H45.75C47.4069 7.5 48.75 8.84315 48.75 10.5V49.5C48.75 51.1569 47.4069 52.5 45.75 52.5H14.25C12.5931 52.5 11.25 51.1569 11.25 49.5V10.5Z"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-								</svg>
-							</i>
-							<h3>Заключить с нами договор о получении займа</h3>
-						</div>
-						<div class="loan__how-get-item">
-							<i>
-								<svg
-									width="60"
-									height="60"
-									viewBox="0 0 60 60"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M18.75 30L42 30C43.6569 30 45 28.6569 45 27L45 14.25C45 12.5931 43.6569 11.25 42 11.25L21.75 11.25C20.0931 11.25 18.75 12.5914 18.75 14.2483C18.75 21.1431 18.75 30.3369 18.75 37.5M18.75 48.75C18.75 48.75 18.75 43.9476 18.75 37.5M18.75 37.5L13.125 37.5M18.75 37.5L31.875 37.5"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-									/>
-								</svg>
-							</i>
-							<h3>Получить займ в день обращения</h3>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="loan__docs">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="title__wrapper">
-								<h2>Какие документы требуются?</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row loan__docs-items">
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="loan__docs-item">
-								<b>01</b>
-								<h4>Паспорт собственника</h4>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="loan__docs-item">
-								<b>02</b>
-								<h4>
-									Свидетельство
-									<br />
-									гос регистрации права
-								</h4>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="loan__docs-item">
-								<b>03</b>
-								<h4>ИНН</h4>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="loan__docs-item">
-								<b>04</b>
-								<h4>Справка о доходах</h4>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 loan__docs-actions">
-							<div class="loan__docs-action">
-								<span></span>
-								<p>Определите, какая вам нужна сумма денег</p>
-							</div>
-							<div class="loan__docs-action">
-								<span></span>
-								<p>Укажите подходящий срок займа</p>
-							</div>
-							<div class="loan__docs-action">
-								<span></span>
-								<p>Рассчитайте, каким будет начисленный процент</p>
-							</div>
-							<div class="loan__docs-action">
-								<span></span>
-								<p>Быстро, надежно и просто получите займ!</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="loan__calculator">
-				<div class="loan__inner">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<form class="calculator">
-									<div class="row g-md-0">
-										<div class="col-12 col-lg-8">
-											<div class="main-calculator__item">
-												<span>Кредитный калькулятор</span>
-
-												<div class="calculator__wrapper">
-													<div class="calculator__sum-wrapper">
-														<div class="calculator__sum-input">
-															<label for="calculatorSumInput">
-																Сумма займа:
-															</label>
-															<input
-																type="text"
-																id="calculatorSumInput"
-																min="0"
-																max="3000000"
-																value="1350000"
-																pattern="[\d]*"
-																autocomplete="off"
-															/>
-															<div class="calculator__days-symbol">₽</div>
-														</div>
-														<div
-															class="calculator__range calculator__sum-slider"
-														></div>
-													</div>
-													<div class="calculator__sum-numbers">
-														<span style="left: 0">0</span>
-														<span
-															class="calculator__sum-second"
-															style="left: 25%"
-														>
-															750 000
-														</span>
-														<span
-															class="calculator__sum-third"
-															style="left: 50%"
-														>
-															1 500 000
-														</span>
-														<span
-															class="calculator__sum-fourth"
-															style="left: 75%"
-														>
-															2 250 000
-														</span>
-														<span style="left: 100%">3 000 000</span>
-													</div>
-												</div>
-
-												<div class="calculator__wrapper">
-													<div class="calculator__days-wrapper">
-														<div class="calculator__days-input">
-															<label for="calculatorDaysInput">
-																Срок займа:
-															</label>
-															<input
-																type="text"
-																id="calculatorDaysInput"
-																min="1"
-																max="365"
-																value="160"
-																pattern="[\d]{1,3}"
-																autocomplete="off"
-															/>
-															<div class="calculator__days-symbol">дней</div>
-														</div>
-														<label for="calculatorDaysSlider"></label>
-														<div
-															class="calculator__range calculator__days-slider"
-														></div>
-													</div>
-													<div class="calculator__days-numbers">
-														<span style="left: 0">1 день</span>
-														<span style="left: 50%">182</span>
-														<span style="left: 100%">365 дней</span>
-													</div>
-												</div>
-
-												<div class="calculator__wrapper">
-													<div class="calculator__percent-wrapper">
-														<div class="calculator__percent-input">
-															<label for="calculatorPercentInput">
-																Процентная ставка:
-															</label>
-															<input
-																type="text"
-																id="calculatorPercentInput"
-																min="0.1"
-																max="0.5"
-																value="0.15"
-																step="0.01"
-																pattern="[.0-9]*"
-																autocomplete="off"
-															/>
-															<div class="calculator__days-symbol">%</div>
-														</div>
-														<label for="calculatorPercentSlider"></label>
-														<div
-															class="calculator__range calculator__percent-slider"
-														></div>
-													</div>
-													<div class="calculator__percent-numbers">
-														<span style="left: 0">0,10%</span>
-														<span style="left: 50%">0,25%</span>
-														<span style="left: 100%">0,50%</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-12 col-lg-4">
-											<div
-												class="main-calculator__item main-calculator__item--result"
-											>
-												<div class="main-calculator__item-summ">
-													<b>
-														<span data-input="calculatorResultInput">
-															1 750 000
-														</span>
-													</b>
-													<span>Сумма займа</span>
-												</div>
-												<div class="main-calculator__item-info">
-													<img src="img/decor.png" alt="" />
-													<ul>
-														<li>
-															<span>Сумма займа:</span>
-															<span>
-																<span data-input="calculatorSumInput">
-																	1 350 000
-																</span>
-															</span>
-														</li>
-														<li>
-															<span>Срок займа:</span>
-															<span>
-																<span data-input="calculatorDaysInput">
-																	160
-																</span>
-																дней
-															</span>
-														</li>
-														<li>
-															<span>Процентная ставка:</span>
-															<span>
-																<span data-input="calculatorPercentInput">
-																	0,15
-																</span>
-															</span>
-														</li>
-														<li>
-															<span>Начислено процентов:</span>
-															<span>
-																<span data-input="calculatorDifferenceInput">
-																	210 756
-																</span>
-															</span>
-														</li>
-													</ul>
-													<div class="btn">Оставить заявку</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="loan__info">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<h2 class="main-page__services-title loan__info-title">
-								Деньги под залог коммерческой недвижимости в
-								<br />
-								Санкт-Петербурге
-							</h2>
-						</div>
-					</div>
-
-					<div class="row">
 						<div class="col-12 col-xl-6">
-							<p class="main-page__services-text">
-								Добиться от банка крупной суммы денег без тщательной проверки
-								практически невозможно. Когда деньги нужны срочно, разумный
-								выход - взять кредит (займ) под залог коммерческой недвижимость.
-								Продавать объект не придется, а деньги будут через несколько
-								дней после обращения. Вырученную сумму можно вложить в
-								перспективное дело, закрыть с ее помощью текущие задолженности,
-								оплатить срочные медицинские услуги.
-							</p>
-							<a href="" class="btn about-company-link">О компании</a>
-						</div>
-						<div class="col-6 decorative-stripes d-none d-xl-block">
-							<svg
-								width="482"
-								height="171"
-								viewBox="0 0 482 171"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1 171V143.324C1 139.154 1.86931 135.03 3.55247 131.214L61 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M61 171V143.324C61 139.154 61.8693 135.03 63.5525 131.214L121 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M121 171V143.324C121 139.154 121.869 135.03 123.552 131.214L181 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M181 171V143.324C181 139.154 181.869 135.03 183.552 131.214L241 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M241 171V143.324C241 139.154 241.869 135.03 243.552 131.214L301 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M301 171V143.324C301 139.154 301.869 135.03 303.552 131.214L361 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M361 171V143.324C361 139.154 361.869 135.03 363.552 131.214L421 1"
-									stroke="#B2B9C1"
-								/>
-								<path
-									d="M421 171V143.324C421 139.154 421.869 135.03 423.552 131.214L481 1"
-									stroke="#B2B9C1"
-								/>
-							</svg>
+							<strong>
+								Так же, для Вашего удобства, Вы можете оплачивать любую сумму в
+								рамках действующего договора(ов), в удобном для Вас месте в
+								любое время, через или в банкомате Сбербанка.
+							</strong>
 						</div>
 					</div>
-				</div>
-			</section>
-
-			<section class="main-conditions">
-				<div class="main-conditions__inner">
-					<div class="container">
-						<div class="row" data-height="620">
-							<div class="col-12 col-lg-5">
-								<h3 class="main-conditions__title">
-									Преимущества оформления займа под залог коммерческой
-									недвижимости в SPFinans
-								</h3>
-							</div>
-							<div class="col-12 col-lg-1"></div>
-							<div class="col-12 col-lg-5">
-								<ul class="main-conditions__list">
-									<li>
-										Работаем по законному договору займа. Неоднозначный договор
-										купли-продажи не применяем.
-									</li>
-									<li>
-										Под залог коммерческой недвижимости займы выдаются без
-										подтверждения доходов. Приносить выписку активных счетов,
-										запрашивать справку с работы не нужно. Ваша собственность
-										выступает лучшим гарантом.
-									</li>
-									<li>
-										Наше конкурентное преимущество - процентная ставка от 0,10%
-										в день. Одно из лучших предложений на микрофинансовом рынке.
-									</li>
-									<li>
-										Не проверяем кредитную историю, не требуем приводить
-										поручителей. Оставлять контакты родственников и друзей “на
-										всякий случай” тоже не нужно.
-									</li>
-									<li>
-										Всегда можно сделать перерасчет или продлить договор на
-										нужный срок. Мы осознаем, что в жизни может случится всякое,
-										поэтому предусмотрели такую опцию.
-									</li>
-									<li>
-										Сотрудник составляет контракт по установленному
-										законодательством юридическому шаблону. Все происходит на
-										ваших глазах, никаких скрытых комиссий мы не прописываем в
-										условиях.
-									</li>
-									<li>
-										Сумма займа ограничена только состоянием и рыночной
-										стоимостью закладываемой собственности. Если с коммерческой
-										недвижимостью все хорошо, мы одобряем до 90% от оценочной
-										стоимости.
-									</li>
-									<li>
-										Деньги под залог коммерческой недвижимости можно получить
-										наличными или переводом на карту.
-									</li>
-									<li>
-										Кредит (займ) под залог коммерческой недвижимости без
-										комиссии
-									</li>
-									<li>
-										Некоторые МФО и ломбарды злоупотребляют доверием граждан,
-										скрывая дополнительные комиссии через юридические лазейки.
-										Такие организации недолговечны, так как быстро теряют
-										репутацию.
-									</li>
-									<li>
-										Мы работаем по прозрачной схеме. Клиент может задать вопрос
-										по любому пункту договора, уточнить все, что интересует.
-										Если вам не понравился эксперт-оценщик - его можно поменять.
-										Тут нет места обману и мошенничеству. Все кристально чисто
-										и, главное, законно.
-									</li>
-									<li>
-										Услуга доступна совершеннолетним гражданам РФ (18 - 70 лет)
-										с пропиской и документами о регистрации прав владения.
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="main-conditions__more">
-					<span>Читать далее</span>
-				</div>
-			</section>
-
-			<section class="treatment-advantages">
-				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="title__wrapper">
-								<h2 class="treatment-advantages__title">
-									Почему нужно обращаться именно к нам?
-								</h2>
+							<div class="lombard__how-work-items">
+								<div class="lombard__how-work-item">
+									<b>01</b>
+									<h5>Платежи или переводы</h5>
+								</div>
+								<div class="lombard__how-work-item">
+									<b>02</b>
+									<h5>Остальное</h5>
+								</div>
+								<div class="lombard__how-work-item">
+									<b>03</b>
+									<h5>
+										Набираем название нашей компании МКК «СПФинанс» или ломбард
+										«Евроломбард»
+									</h5>
+								</div>
+								<div class="lombard__how-work-item">
+									<b>04</b>
+									<h5>Вводим ФИО</h5>
+								</div>
+								<div class="lombard__how-work-item">
+									<b>05</b>
+									<h5>В назначении платежа опять вводим ФИО</h5>
+								</div>
+								<div class="lombard__how-work-item">
+									<b>06</b>
+									<h5>Вводим сумму платежа и выбираем «продолжить»</h5>
+								</div>
 							</div>
+							<strong class="lombard__how-work-note">
+								* может взиматься оплата по тарифам банка.
+							</strong>
 						</div>
 					</div>
-					<div class="row treatment-advantages__items">
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="treatment-advantages__item">
-								<i>
-									<svg
-										width="60"
-										height="60"
-										viewBox="0 0 60 60"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M18.75 30L42 30C43.6569 30 45 28.6569 45 27L45 14.25C45 12.5931 43.6569 11.25 42 11.25L21.75 11.25C20.0931 11.25 18.75 12.5914 18.75 14.2483C18.75 21.1431 18.75 30.3369 18.75 37.5M18.75 48.75C18.75 48.75 18.75 43.9476 18.75 37.5M18.75 37.5L13.125 37.5M18.75 37.5L31.875 37.5"
-											stroke="#00AC3C"
-											stroke-width="2"
-											stroke-linecap="round"
-										></path>
-									</svg>
-								</i>
-								<h4>Без дополнительных комиссий</h4>
-							</div>
+					<div class="row">
+						<div class="col-12">
+							<button class="btn lombard__how-work-btn">Оставить заявку</button>
 						</div>
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="treatment-advantages__item">
-								<i>
-									<svg
-										width="60"
-										height="60"
-										viewBox="0 0 60 60"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<ellipse
-											cx="30"
-											cy="18.75"
-											rx="20.625"
-											ry="7.5"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-										<path
-											d="M50.625 30C50.625 34.1421 41.3909 37.5 30 37.5C18.6091 37.5 9.375 34.1421 9.375 30"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-										<path
-											d="M9.375 18.75V41.25C9.375 45.3921 18.6091 48.75 30 48.75C41.3909 48.75 50.625 45.3921 50.625 41.25V18.75"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-									</svg>
-								</i>
-								<h4>Полная свобода на использование займа</h4>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="treatment-advantages__item">
-								<i>
-									<svg
-										width="60"
-										height="60"
-										viewBox="0 0 60 60"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M11.25 29.25C11.25 27.5931 12.5931 26.25 14.25 26.25H45.75C47.4069 26.25 48.75 27.5931 48.75 29.25V49.5C48.75 51.1569 47.4069 52.5 45.75 52.5H14.25C12.5931 52.5 11.25 51.1569 11.25 49.5V29.25Z"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-										<path
-											d="M39.375 26.25V16.875C39.375 11.6973 35.1777 7.5 30 7.5V7.5C24.8223 7.5 20.625 11.6973 20.625 16.875V26.25"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-									</svg>
-								</i>
-								<h4>Залоговая недвижимость остаётся в Вашем пользовании</h4>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 col-sm-12">
-							<div class="treatment-advantages__item">
-								<i>
-									<svg
-										width="60"
-										height="60"
-										viewBox="0 0 60 60"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M13.125 46.875L46.875 13.125"
-											stroke="#00AC3C"
-											stroke-width="2"
-											stroke-linecap="round"
-										/>
-										<circle
-											cx="16.875"
-											cy="16.875"
-											r="7.5"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-										<circle
-											cx="43.125"
-											cy="43.125"
-											r="7.5"
-											stroke="#00AC3C"
-											stroke-width="2"
-										/>
-									</svg>
-								</i>
-								<h4>Выгодные условия погашения займа</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="loan-application">
-				<div class="container">
-					<div class="main-map__form loan-application__form">
-						<h3>Заявка на займ</h3>
-						<form class="d-flex gap-4" id="loan-application">
-							<input type="text" name="" id="" placeholder="Имя" />
-							<input type="tel" name="" id="" placeholder="+7" required />
-							<select class="form-select">
-								<option selected disabled>Тип займа</option>
-								<option value="1">Авто</option>
-							</select>
-							<input class="btn" type="submit" value="Оставить заявку" />
-						</form>
 					</div>
 				</div>
 			</section>
@@ -1850,9 +1141,6 @@
 			</div>
 		</footer>
 
-		<script src="js/cleave.min.js"></script>
-		<script src="js/wNumb.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script
 			src="https://api-maps.yandex.ru/3.0/?apikey=41d880d2-9128-4f13-b1e3-28e243c3a9ef&lang=ru_RU"

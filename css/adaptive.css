@@ -43,11 +43,11 @@
 		padding-right: 20px;
 	}
 	.loan__docs-item {
-        padding: 50px;
-    }
-    .loan__info-title br {
-        display: none;
-    }
+		padding: 50px;
+	}
+	.loan__info-title br {
+		display: none;
+	}
 }
 @media (max-width: 1399px) {
 	.main-page__services-video a {
@@ -190,7 +190,6 @@
 		margin-bottom: 40px;
 	}
 	.main-page__services-items {
-		-ms-grid-columns: (1fr) [3];
 		grid-template-columns: repeat(3, 1fr);
 	}
 	.main-page__services-item {
@@ -239,27 +238,30 @@
 		font-size: 18px;
 	}
 	.banner h1,
-    .treatment-advantages__title {
-        font-size: 55px;
-    }
-    .loan-item__btns {
-        row-gap: 20px;
-    }
-    .loan__btn {
-        margin-bottom: 100px;
-    }
-    .loan__docs-items,
-    .treatment-advantages__items {
-        row-gap: 20px;
-    }
-	.lombard__banner .application__form  {
-        width: 100%;
-    }
-    .lombard__advantages-items {
-        row-gap: 20px;
-    }
+	.treatment-advantages__title {
+		font-size: 55px;
+	}
+	.loan-item__btns {
+		row-gap: 20px;
+	}
+	.loan__btn {
+		margin-bottom: 100px;
+	}
+	.loan__docs-items,
+	.treatment-advantages__items {
+		row-gap: 20px;
+	}
+	.lombard__banner .application__form {
+		width: 100%;
+	}
+	.lombard__advantages-items {
+		row-gap: 20px;
+	}
 	.documents__items {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.contacts-info .row {
+		gap: 20px;
 	}
 }
 @media (max-width: 1000px) {
@@ -429,7 +431,6 @@
 		padding: 0px 20px 20px;
 	}
 	.main-page__services-items {
-		-ms-grid-columns: (1fr) [2];
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.main-conditions {
@@ -577,36 +578,36 @@
 		gap: 20px;
 	}
 	.loan-item__btn span br {
-        display: none;
-    }
-    .loan__how-get-items {
-        grid-template: repeat(3, 1fr) / 100%;
-        gap: 10px;
-    }
-    .loan__how-get-item {
-        gap: 20px;
-        padding: 30px;
-    }
-    .loan__docs-actions {
-        grid-template: repeat(4, 1fr) / repeat(1, 100%);
-    }
-    .loan__docs-action {
-        padding: 30px;
-    }
-    .loan__info-title br {
-        display: block;
-    }
-	.lombard__banner .application__form  {
-        margin-top: 40px;
-    }
+		display: none;
+	}
+	.loan__how-get-items {
+		grid-template: repeat(3, 1fr) / 100%;
+		gap: 10px;
+	}
+	.loan__how-get-item {
+		gap: 20px;
+		padding: 30px;
+	}
+	.loan__docs-actions {
+		grid-template: repeat(4, 1fr) / repeat(1, 100%);
+	}
+	.loan__docs-action {
+		padding: 30px;
+	}
+	.loan__info-title br {
+		display: block;
+	}
+	.lombard__banner .application__form {
+		margin-top: 30px;
+	}
 
-    .lombard__how-work-items,
+	.lombard__how-work-items,
 	.documents__items {
-        grid-template-columns: 100%;
-    }
+		grid-template-columns: 100%;
+	}
 
 	.property__links-items {
-        grid-template-columns: 100%;
+		grid-template-columns: 100%;
 		grid-auto-rows: auto;
 	}
 
@@ -838,38 +839,38 @@
 		padding: 50px 0 20px;
 	}
 	.loan__banner h1 br {
-        display: none;
-    }
+		display: none;
+	}
 	.loan__btn {
-        display: none;
-    }
+		display: none;
+	}
 	.loan-item__btns {
-        row-gap: 10px;
-    }
-    .loan__how-get {
-        padding: 60px 0;
-    }
+		row-gap: 10px;
+	}
+	.loan__how-get {
+		padding: 60px 0;
+	}
 	.loan__how-get-items {
-        gap: 2px;
-    }
-    .loan__how-get-item h3 {
-        font-size: 24px;
-    }
+		gap: 2px;
+	}
+	.loan__how-get-item h3 {
+		font-size: 24px;
+	}
 	.loan .loan__how-get {
 		padding: 60px 0 20px;
 	}
-    .loan__docs {
-        padding: 60px 0 40px;
-    }
-    .loan__docs-actions {
-        margin: 40px 0 0px;
-    }
+	.loan__docs {
+		padding: 60px 0 40px;
+	}
+	.loan__docs-actions {
+		margin: 40px 0 0px;
+	}
 	.loan-application {
 		padding-bottom: 40px;
 	}
 	.loan__docs-items {
-        row-gap: 10px;
-    }
+		row-gap: 10px;
+	}
 	.loan__calculator {
 		padding-bottom: 40px;
 	}
@@ -881,57 +882,59 @@
 		margin-bottom: 40px;
 	}
 	.lombard__banner {
-        padding: 50px 0 20px;
-    }
-    .banner h1 {
-        font-size: 30px;
-    }
+		padding: 60px 0 20px;
+	}
+	.banner h1 {
+		font-size: 30px;
+	}
 	.treatment-advantages {
 		padding: 60px 0;
 	}
-    .application__form {
-        padding: 30px 30px 50px;
-    }
-    .title__wrapper .btn {
-        display: none;
-    }
-    .lombard__advantages {
-        padding: 40px 0 0;
-    }
-    .lombard__advantages-items {
-        border-bottom: none;
-    }
-    .lombard__advantages .title__wrapper {
-        margin-bottom: 10px;
-    }
-    .lombard__advantages-text {
-        margin-bottom: 40px;
-        font-size: 16px;
-    }
-    .lombard__advantages-items {
-        padding-bottom: 20px;
-    }
-    .lombard__advantages-item {
-        padding: 0 10px 60px;
-        gap: 20px;
-    }
-    .lombard__how-work {
-        padding: 40px 0 20px;
-        border-top: 1px solid var(--razdeliteli-color-border);
-        border-bottom: 1px solid var(--razdeliteli-color-border);
-    }
-    .lombard__how-work-items {
-        border-bottom: none;
-        padding-bottom: 20px;
-    }
-    .lombard__how-work-btn {
-        display: block;
-    }
-    .lombard .reviews {
-        padding-top: 60px;
-    }
+	.application__form {
+		padding: 30px 30px 50px;
+	}
+	.title__wrapper .btn {
+		display: none;
+	}
+	.lombard__advantages {
+		padding: 40px 0 0;
+	}
+	.lombard__advantages-items {
+		border-bottom: none;
+	}
+	.lombard__advantages .title__wrapper {
+		margin-bottom: 10px;
+	}
+	.lombard__advantages-text {
+		margin-bottom: 40px;
+		font-size: 16px;
+	}
+	.lombard__advantages-items {
+		padding-bottom: 20px;
+	}
+	.lombard__advantages-item {
+		padding: 0 10px 60px;
+		gap: 20px;
+	}
+	.lombard__how-work {
+		padding: 40px 0 20px;
+		border-top: 1px solid
+		var(--razdeliteli-color-border);
+		border-bottom: 1px solid
+		var(--razdeliteli-color-border);
+	}
+	.lombard__how-work-items {
+		border-bottom: none;
+		padding-bottom: 20px;
+	}
+	.lombard__how-work-btn {
+		display: block;
+	}
+	.lombard .reviews {
+		padding-top: 60px;
+	}
 
-    .lombard__guarantees {
+	.lombard__guarantees {
 		padding-bottom: 60px;
 	}
 	.lombard__guarantees {
@@ -957,7 +960,8 @@
 		font-size: 18px;
 	}
 	.property__links {
-		border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-white-dark);
+		border-bottom: 1px solid
+			var(--fony--vspomogatelnye-cveta-background-white-dark);
 	}
 	.property__links-items {
 		padding-bottom: 40px;
@@ -986,6 +990,121 @@
 	}
 	.accordion summary {
 		padding: 25px 50px 25px 0;
+	}
+	.contacts-map h1 {
+		font-size: 30px;
+	}
+	.contacts-map ul {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.contacts-map li {
+		flex-direction: column;
+		gap: 5px;
+	}
+	.contacts-map__inner {
+		padding: 40px 0 20px;
+	}
+	.contacts-map__map {
+		margin-top: 40px;
+	}
+	.contacts-info__inner {
+		padding: 0 0 20px;
+	}
+	.contacts-requisites__inner {
+		padding: 60px 0;
+	}
+	.contacts-requisites + .contacts-requisites .contacts-requisites__inner {
+		padding: 0;
+	}
+	.contacts-requisites__title {
+		font-size: 30px;
+	}
+	.contacts-requisites .row {
+		flex-direction: column;
+		padding: 20px;
+		gap: 5px;
+	}
+	.contacts-requisites span {
+		padding: 0;
+	}
+	.contacts-requisites span:first-child {
+		opacity: 0.5;
+	}
+	.contacts-requisites + .treatment-advantages {
+		border-top: none;
+	}
+	.contacts-requisites + .treatment-advantages .treatment-advantages__items {
+		row-gap: 2px;
+	}
+	.payment__title {
+		font-size: 30px;
+	}
+	.payment__text {
+		margin-top: 20px;
+	}
+	.lombard__how-work--payment .lombard__how-work-note {
+		font-size: 16px;
+	}
+	.lombard__how-work--payment .lombard__how-work-btn {
+		margin-top: 20px;
+	}
+
+	.lombard .divider__stripe {
+		display: none;
+	}
+
+	.lombard__guarantees {
+		border-top: 1px solid
+		var(--razdeliteli-color-border);
+		border-bottom: 1px solid
+		var(--razdeliteli-color-border);
+	}
+
+	.contacts-map__map {
+		height: 400px;
+	}
+
+	.about__text h1 {
+		margin-top: 0;
+		font-size: 30px;
+	}
+	.about__text p {
+		font-size: 16px;
+	}
+	.about__list {
+		gap: 0;
+		margin-top: 40px;
+	}
+	.about__list .about__item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.about__item {
+		font-size: 16px;
+	}
+	.about__logo {
+		margin-top: 40px;
+		height: 250px;
+	}
+	.about__logo + .about__advantage {
+		margin-top: 40px;
+	}
+	.about__advantage {
+		margin-top: 36px;
+		gap: 12px;
+	}
+	.about__advantage + .about__text h1 {
+		margin: 40px 0 20px;
+	}
+	.about__banner {
+		padding-bottom: 0px;
+	}
+	.about__banner .title__wrapper {
+		margin-top: 40px;
+	}
+	.about__inner {
+		padding-bottom: 40px;
 	}
 }
 @media (max-width: 575px) {
@@ -1106,28 +1225,39 @@
 		width: 100%;
 	}
 	.loan__banner {
-        padding: 60px 0 50px;
-    }
-	
-    .treatment-advantages__title {
-        font-size: 45px;
-    }
-    .loan__btn {
-        margin-bottom: 60px;
-    }
-    .treatment-advantages {
-        padding: 60px 0;
-    }
+		padding: 60px 0 50px;
+	}
+
+	.treatment-advantages__title {
+		font-size: 45px;
+	}
+	.loan__btn {
+		margin-bottom: 60px;
+	}
+	.treatment-advantages {
+		padding: 60px 0;
+	}
 	.lombard__banner {
-        background-image: url(../img/lombard-mobile.jpg) ;
-        background-size: 100% 545px, cover;
-        background-position: center top;
-        background-color: #2b454e;
-    }
+		background-image: url(../img/lombard-mobile.jpg);
+		background-size: 100% 545px, cover;
+		background-position: center top;
+		background-color: #2b454e;
+	}
 
 	.documents__links a {
-		display: flex; 
+		display: flex;
 		justify-content: space-between;
+	}
+
+	.lombard__guarantees-item p {
+		font-size: 14px;
+	}
+
+	.lombard-documents__items {
+		row-gap: 10px;
+	}
+	.contacts-map__map {
+		pointer-events: none;
 	}
 }
 @media (max-width: 450px) {

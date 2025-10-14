@@ -69,16 +69,16 @@
 	fill: var(--fony--vspomogatelnye-cveta-background-white);
 }
 .dark .menu__list-level {
-	border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-white-dark);    
+	border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-white-dark);
 	background-color: var(--cveta-brenda-color-primory-1);
-} 
+}
 .dark .main-page__services,
 .dark .main-page__services-items {
 	border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-white-dark);
 }
 
 .dark .menu__link-level {
-	color: var(--fony--vspomogatelnye-cveta-background-white);    
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 
 .dark .main-page__services-item p {
@@ -125,8 +125,6 @@
 	background: var(--fony--vspomogatelnye-cveta-background-white-dark);
 }
 
-
-
 .dark .main-conditions::before {
 	opacity: 0.1;
 }
@@ -164,22 +162,26 @@
 }
 
 .dark.loan .loan__how-get {
-    border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
-    border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+	border-top: 1px solid
+		var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+	border-bottom: 1px solid
+		var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
 }
 
 .dark .loan__how-get-item,
-.dark .treatment-advantages__item {
-    background: var(--fony--vspomogatelnye-cveta-background-white-dark);
+.dark .treatment-advantages__item,
+.dark .lombard-documents__item {
+	background: var(--fony--vspomogatelnye-cveta-background-white-dark);
 }
 
 .dark .loan__docs-item,
 .dark .loan__docs-action {
-    background: var(--cveta-brenda-color-primory-1);
+	background: var(--cveta-brenda-color-primory-1);
 }
 
 .dark .loan__info {
-	border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+	border-top: 1px solid
+		var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
 }
 
 .dark .main-map__form {
@@ -310,10 +312,10 @@
 }
 
 .dark .calculator__range .noUi-handle {
-    background: var(--fony--vspomogatelnye-cveta-background-white);
+	background: var(--fony--vspomogatelnye-cveta-background-white);
 }
 .dark .calculator__range .noUi-connect {
-    border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-white);
+	border-top: 1px solid var(--fony--vspomogatelnye-cveta-background-white);
 }
 
 .dark .banner__text {
@@ -322,12 +324,12 @@
 .dark .lombard__banner {
 	background: var(--fony--vspomogatelnye-cveta-background-medium-grey-dark);
 }
- 
+
 .dark .lombard__advantages-text,
 .dark .property__links-item ul li {
-	color: var(--fony--vspomogatelnye-cveta-background-white);    
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
- 
+
 .dark .lombard__how-work-item,
 .dark .property__links-item,
 .dark .documents__item {
@@ -335,18 +337,44 @@
 }
 
 .dark.property .main-map {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 .dark .accordion summary,
 .dark .documents__item {
-	color: var(--fony--vspomogatelnye-cveta-background-white);   
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 
-.dark .accordion summary::before, 
+.dark .accordion summary::before,
 .dark .accordion summary::after {
-    background: var(--fony--vspomogatelnye-cveta-background-white);   
+	background: var(--fony--vspomogatelnye-cveta-background-white);
 }
+
+.dark .divider__stripe {
+	background-color: #2e4a53;
+}
+
+.dark .contacts-map__select .form-select {
+	background-color: transparent;
+	color: white;
+	border: 1px solid #2e4a53;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cg clip-path='url(%23a)' opacity='.3'%3E%3Cpath fill='%23fff' d='M7.6 9.467 5.6 6.8A.5.5 0 0 1 6 6h4a.5.5 0 0 1 .4.8l-2 2.667a.5.5 0 0 1-.8 0Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.dark .payment__item div {
+	background-color: #2e4a53;
+}
+
+.dark .about__logo {
+	border: 1px solid #3c5e69;
+	background-color: #2e4a53;
+}
+
+.dark .lombard__advantages-items,
+.dark .lombard__how-work-items {
+    border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+}
+
 
 @media (max-width: 1199px) {
 	.dark .menu__list-level {
@@ -355,7 +383,7 @@
 	}
 	.dark .menu__link-level {
 		color: #878b8e;
-	} 
+	}
 }
 
 @media (max-width: 991px) {
@@ -375,10 +403,16 @@
 			rgba(60, 94, 105, 1) 60%
 		);
 	}
+
+	
 }
 
 @media (max-width: 767px) {
 	.dark .main-page__services-items {
-        border-top: none;
-    }
+		border-top: none;
+	}
+
+	.dark .lombard__advantages {
+		border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+	}
 }
