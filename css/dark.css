@@ -28,7 +28,7 @@
 	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 
-.dark .main-page__reviews,
+.dark .main-page .reviews,
 .dark .main-page__news,
 .dark .main-map,
 .dark .main-page__about,
