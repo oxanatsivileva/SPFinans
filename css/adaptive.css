@@ -263,6 +263,14 @@
 	.contacts-info .row {
 		gap: 20px;
 	}
+	.social__info {
+		padding: 50px;
+		width: 50%;
+	}
+	.social__item-slide {
+		width: 50%;
+	}
+	
 }
 @media (max-width: 1000px) {
 	.main-hero .carousel-item {
@@ -614,6 +622,29 @@
 	.property__links-item ul {
 		margin-bottom: 10px;
 	}
+
+	.loyalty__items {
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 1fr;		
+	}
+
+	.loyalty__application-wrapper {
+		padding: 30px;
+	}
+	.social__items {
+		grid-auto-rows: auto;
+	}
+	.social__item {
+		flex-direction: column;
+	}
+	.social__item-slide,
+	.social__info {
+        width: 100%;
+    }
+
+	.social__item-slide {
+		height: 270px;
+	}
 }
 @media (max-width: 767px) {
 	.mt-80 {
@@ -782,7 +813,7 @@
 	.main-page__certificates {
 		padding-top: 60px;
 	}
-	.news__link-items,
+	.main-page .news__link-items,
 	.main-page__certificates-items {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
@@ -797,7 +828,7 @@
 	.main-page__certificates-text {
 		padding-top: 30px;
 	}
-	.news__link-items > * {
+	.main-page .news__link-items > * {
 		width: 75%;
 	}
 	.news__link-img {
@@ -1106,6 +1137,93 @@
 	.about__inner {
 		padding-bottom: 40px;
 	}
+
+	.title__banner {
+		height: 250px;
+		margin-bottom: 40px;
+	}
+
+	.news .news__link-items {
+		row-gap: 20px;
+	}
+
+	.news__section .divider__stripe {
+		margin-bottom: 40px;
+	}
+
+	.detail-page__text h2 {
+		font-size: 24px;
+	}
+
+	.detail-page .loan__how-get {
+		padding: 40px 0 60px;
+	}
+
+	.loyalty__items {
+		grid-template-columns: 100%;
+		grid-auto-rows: auto;
+		gap: 30px;
+		margin-bottom: 60px;
+	}
+	.loyalty .card-img-top {
+		width: 100%;
+		height: 250px;
+	}
+	.loyalty .card-title {
+		margin: 20px 0;
+	}
+	.loyalty__notice {
+		gap: 40px;
+	}
+	.loyalty__application-wrapper {
+		padding: 20px 20px 40px;
+	}
+	.loyalty__inputs {
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+	.loyalty__application-form textarea {
+		margin-bottom: 30px;
+	}
+	.loyalty__application-form .btn {
+		width: 100%;
+	}
+	.loyalty__application-wrapper h3 {
+		margin-bottom: 50px;
+	}
+	.social__item-slide,
+	.social__info {
+		border-radius: 20px;
+    }
+	.social__item .carousel-indicators {
+		margin-bottom: 25px;
+		margin-left: 30px;
+	}
+	.social__item .carousel-control-next, .social__item .carousel-control-prev {
+		bottom: 30px;
+	}
+	.social__info h3 {
+		font-size: 24px;
+	}
+	.social__info {
+		padding: 20px;
+	}
+	.social__items {
+		margin-bottom: 20px;
+	}
+	.popup .modal-header {
+		padding: 20px 20px 50px 20px;
+	}
+	.popup .modal-body {
+		padding: 0 20px 40px;
+	}
+	.popup__form {
+		gap: 10px;
+	}
+	.popup__form .btn {
+		margin-top: 20px;
+	}
+
 }
 @media (max-width: 575px) {
 	.header {
@@ -1259,6 +1377,9 @@
 	.contacts-map__map {
 		pointer-events: none;
 	}
+	.loyalty__inputs {
+		grid-template-columns: 100%;
+	}
 }
 @media (max-width: 450px) {
 	.header__logo svg {
@@ -1285,4 +1406,10 @@
 	.main {
 		padding-top: 360px;
 	}
+}
+
+@media (max-width: 352px) {
+    .main {
+        padding-top: 430px;
+    }
 }
