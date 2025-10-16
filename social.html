@@ -4,12 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="css/nouislider.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/dop.css" />
 		<link rel="stylesheet" href="css/adaptive.css" />
 		<link rel="stylesheet" href="css/dark.css" />
-		<link rel="stylesheet" href="css/dop.css" />
-		<link rel="stylesheet" href="css/dop-oxana.css " />
+		<link rel="stylesheet" href="css/dop-oxana.css" />
 
 		<title>SPFinans</title>
 	</head>
@@ -405,7 +404,7 @@
 								Личный кабинет
 							</a>
 							<label class="switch">
-								<input type="checkbox" checked/>
+								<input type="checkbox" checked />
 							</label>
 						</div>
 					</div>
@@ -456,7 +455,7 @@
 										<div class="menu__body">
 											<ul class="menu__list">
 												<li>
-													<a class="menu__link" href="./property.html">
+													<a class="menu__link" href="#">
 														Деньги под залог
 														<svg
 															width="16"
@@ -587,7 +586,9 @@
 												</li>
 
 												<li>
-													<a class="menu__link" href="#">Документация</a>
+													<a class="menu__link" href="./documents.html">
+														Документация
+													</a>
 												</li>
 
 												<li>
@@ -695,1746 +696,215 @@
 			</div>
 		</header>
 
-		<main class="main  main-page">
-			<section class="main-hero">
-				<div
-					id="carouselExampleControls"
-					class="carousel slide"
-					data-bs-ride="carousel"
-				>
-					<div class="carousel-inner">
-						<div class="carousel-item active" style="--item-color: #3c5e69">
-							<div class="container">
-								<div class="row align-items-center">
-									<div class="col-12 col-lg-5">
-										<div class="main-hero__text">
-											<h1>Деньги под залог автомобиля</h1>
-											<p>
-												Сумма больше и ставка ниже, если оформите авто в залог.
-												Машина останется в вашей собственности
-											</p>
-											<button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-										</div>
-									</div>
-									<div class="col-12 col-lg-7">
-										<div class="main-hero__img">
-											<img src="img/hero.png" alt="" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<path
-														stroke="#2B454E"
-														stroke-linecap="round"
-														stroke-width="2"
-														d="M7 25 25 7"
-													/>
-													<circle
-														cx="9"
-														cy="9"
-														r="4"
-														stroke="#2B454E"
-														stroke-width="2"
-													/>
-													<circle
-														cx="23"
-														cy="23"
-														r="4"
-														stroke="#2B454E"
-														stroke-width="2"
-													/>
-												</svg>
-											</i>
-											<span>
-												Процентная ставка
-												<br />
-												от 0.10% в день
-											</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<ellipse
-														cx="16"
-														cy="10"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="11"
-														ry="4"
-													/>
-													<path
-														stroke="#2B454E"
-														stroke-width="2"
-														d="M27 16c0 2.21-4.925 4-11 4S5 18.21 5 16"
-													/>
-													<path
-														stroke="#2B454E"
-														stroke-width="2"
-														d="M5 10v12c0 2.21 4.925 4 11 4s11-1.79 11-4V10"
-													/>
-												</svg>
-											</i>
-											<span>Сумма не ограничена</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<path
-														stroke="#2B454E"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-														d="M21 2.667V8M11 2.667V8M4 13h24"
-													/>
-													<rect
-														width="24"
-														height="24"
-														x="4"
-														y="4"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="5"
-													/>
-												</svg>
-											</i>
-											<span>Перерасчет по дням</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<rect
-														width="6"
-														height="6"
-														x="8"
-														y="7"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="3"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="13"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="23"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="18"
-														y="7"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-												</svg>
-											</i>
-											<span>Такси за наш счет</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="carousel-item" style="--item-color: #3c5e69">
-							<div class="container">
-								<div class="row align-items-center">
-									<div class="col-12 col-lg-5">
-										<div class="main-hero__text">
-											<h1>Деньги под залог автомобиля</h1>
-											<p>
-												Сумма больше и ставка ниже, если оформите авто в залог.
-												Машина останется в вашей собственности
-											</p>
-											<button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-										</div>
-									</div>
-									<div class="col-12 col-lg-7">
-										<div class="main-hero__img">
-											<img src="img/hero.png" alt="" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<path
-														stroke="#2B454E"
-														stroke-linecap="round"
-														stroke-width="2"
-														d="M7 25 25 7"
-													/>
-													<circle
-														cx="9"
-														cy="9"
-														r="4"
-														stroke="#2B454E"
-														stroke-width="2"
-													/>
-													<circle
-														cx="23"
-														cy="23"
-														r="4"
-														stroke="#2B454E"
-														stroke-width="2"
-													/>
-												</svg>
-											</i>
-											<span>
-												Процентная ставка
-												<br />
-												от 0.10% в день
-											</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<ellipse
-														cx="16"
-														cy="10"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="11"
-														ry="4"
-													/>
-													<path
-														stroke="#2B454E"
-														stroke-width="2"
-														d="M27 16c0 2.21-4.925 4-11 4S5 18.21 5 16"
-													/>
-													<path
-														stroke="#2B454E"
-														stroke-width="2"
-														d="M5 10v12c0 2.21 4.925 4 11 4s11-1.79 11-4V10"
-													/>
-												</svg>
-											</i>
-											<span>Сумма не ограничена</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<path
-														stroke="#2B454E"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-														d="M21 2.667V8M11 2.667V8M4 13h24"
-													/>
-													<rect
-														width="24"
-														height="24"
-														x="4"
-														y="4"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="5"
-													/>
-												</svg>
-											</i>
-											<span>Перерасчет по дням</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<rect
-														width="6"
-														height="6"
-														x="8"
-														y="7"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="3"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="13"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="23"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="18"
-														y="7"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-												</svg>
-											</i>
-											<span>Такси за наш счет</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="carousel-item" style="--item-color: #3c5e69">
-							<div class="container">
-								<div class="row align-items-center">
-									<div class="col-12 col-lg-5">
-										<div class="main-hero__text">
-											<h1>Деньги под залог автомобиля</h1>
-											<p>
-												Сумма больше и ставка ниже, если оформите авто в залог.
-												Машина останется в вашей собственности
-											</p>
-											<button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-										</div>
-									</div>
-									<div class="col-12 col-lg-7">
-										<div class="main-hero__img">
-											<img src="img/hero.png" alt="" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<path
-														stroke="#2B454E"
-														stroke-linecap="round"
-														stroke-width="2"
-														d="M7 25 25 7"
-													/>
-													<circle
-														cx="9"
-														cy="9"
-														r="4"
-														stroke="#2B454E"
-														stroke-width="2"
-													/>
-													<circle
-														cx="23"
-														cy="23"
-														r="4"
-														stroke="#2B454E"
-														stroke-width="2"
-													/>
-												</svg>
-											</i>
-											<span>
-												Процентная ставка
-												<br />
-												от 0.10% в день
-											</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<ellipse
-														cx="16"
-														cy="10"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="11"
-														ry="4"
-													/>
-													<path
-														stroke="#2B454E"
-														stroke-width="2"
-														d="M27 16c0 2.21-4.925 4-11 4S5 18.21 5 16"
-													/>
-													<path
-														stroke="#2B454E"
-														stroke-width="2"
-														d="M5 10v12c0 2.21 4.925 4 11 4s11-1.79 11-4V10"
-													/>
-												</svg>
-											</i>
-											<span>Сумма не ограничена</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<path
-														stroke="#2B454E"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-														d="M21 2.667V8M11 2.667V8M4 13h24"
-													/>
-													<rect
-														width="24"
-														height="24"
-														x="4"
-														y="4"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="5"
-													/>
-												</svg>
-											</i>
-											<span>Перерасчет по дням</span>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xxl-3">
-										<div class="main-hero__btn">
-											<i>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="32"
-													height="32"
-													fill="none"
-												>
-													<rect
-														width="6"
-														height="6"
-														x="8"
-														y="7"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="3"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="13"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="23"
-														y="16"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-													<rect
-														width="6"
-														height="6"
-														x="18"
-														y="7"
-														stroke="#2B454E"
-														stroke-width="2"
-														rx="2"
-													/>
-												</svg>
-											</i>
-											<span>Такси за наш счет</span>
-										</div>
-									</div>
-								</div>
+		<main class="main social">
+			<section class="social__section mt-80">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="title__wrapper">
+								<h1>Социальные проекты</h1>
 							</div>
 						</div>
 					</div>
-					<div class="main-hero__counter"></div>
-					<button
-						class="carousel-control-prev"
-						type="button"
-						data-bs-target="#carouselExampleControls"
-						data-bs-slide="prev"
-					>
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button
-						class="carousel-control-next"
-						type="button"
-						data-bs-target="#carouselExampleControls"
-						data-bs-slide="next"
-					>
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>
-			</section>
 
-			<section class="main-calculator">
-				<div class="container">
-					<div class="main-calculator__inner">
-						<div class="row">
-							<div class="col-12">
-								<h2 class="main-calculator__title">
-									Что нужно, чтобы получить деньги
-								</h2>
-							</div>
-						</div>
-						<div class="row g-md-0">
-							<div class="col-12 col-lg-4">
-								<div class="main-calculator__item">
-									<span>Заполните заявку</span>
-									<b>01</b>
-								</div>
-							</div>
-							<div class="col-12 col-lg-4">
-								<div class="main-calculator__item">
-									<span>Предоставьте документы и залог</span>
-									<b>02</b>
-								</div>
-							</div>
-							<div class="col-12 col-lg-4">
-								<div class="main-calculator__item">
-									<span>Получите ваши деньги</span>
-									<b>03</b>
-								</div>
-							</div>
-							<div class="col-12">
-								<form class="calculator">
-									<div class="row g-md-0">
-										<div class="col-12 col-lg-8">
-											<div class="main-calculator__item">
-												<span>Кредитный калькулятор</span>
-
-												<div class="calculator__wrapper">
-													<div class="calculator__sum-wrapper">
-														<div class="calculator__sum-input">
-															<label for="calculatorSumInput">
-																Сумма займа:
-															</label>
-															<input
-																type="text"
-																id="calculatorSumInput"
-																min="0"
-																max="3000000"
-																value="1350000"
-																pattern="[\d]*"
-																autocomplete="off"
-															/>
-															<div class="calculator__days-symbol">₽</div>
-														</div>
-														<div
-															class="calculator__range calculator__sum-slider"
-														></div>
-													</div>
-													<div class="calculator__sum-numbers">
-														<span style="left: 0">0</span>
-														<span
-															class="calculator__sum-second"
-															style="left: 25%"
-														>
-															750 000
-														</span>
-														<span
-															class="calculator__sum-third"
-															style="left: 50%"
-														>
-															1 500 000
-														</span>
-														<span
-															class="calculator__sum-fourth"
-															style="left: 75%"
-														>
-															2 250 000
-														</span>
-														<span style="left: 100%">3 000 000</span>
-													</div>
-												</div>
-
-												<div class="calculator__wrapper">
-													<div class="calculator__days-wrapper">
-														<div class="calculator__days-input">
-															<label for="calculatorDaysInput">
-																Срок займа:
-															</label>
-															<input
-																type="text"
-																id="calculatorDaysInput"
-																min="1"
-																max="365"
-																value="160"
-																pattern="[\d]{1,3}"
-																autocomplete="off"
-															/>
-															<div class="calculator__days-symbol">дней</div>
-														</div>
-														<label for="calculatorDaysSlider"></label>
-														<div
-															class="calculator__range calculator__days-slider"
-														></div>
-													</div>
-													<div class="calculator__days-numbers">
-														<span style="left: 0">1 день</span>
-														<span style="left: 50%">182</span>
-														<span style="left: 100%">365 дней</span>
-													</div>
-												</div>
-
-												<div class="calculator__wrapper">
-													<div class="calculator__percent-wrapper">
-														<div class="calculator__percent-input">
-															<label for="calculatorPercentInput">
-																Процентная ставка:
-															</label>
-															<input
-																type="text"
-																id="calculatorPercentInput"
-																min="0.1"
-																max="0.5"
-																value="0.15"
-																step="0.01"
-																pattern="[.0-9]*"
-																autocomplete="off"
-															/>
-															<div class="calculator__days-symbol">%</div>
-														</div>
-														<label for="calculatorPercentSlider"></label>
-														<div
-															class="calculator__range calculator__percent-slider"
-														></div>
-													</div>
-													<div class="calculator__percent-numbers">
-														<span style="left: 0">0,10%</span>
-														<span style="left: 50%">0,25%</span>
-														<span style="left: 100%">0,50%</span>
-													</div>
-												</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="social__items">
+								<div class="social__item">
+									<div
+										id="carouselSocial-1"
+										class="social__item-slide carousel slide"
+										data-bs-ride="carousel"
+										data-bs-interval="false"
+										data-bs-touch="true"
+									>
+										<div class="carousel-indicators"></div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img
+													src="img/social-1.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-2.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-3.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-4.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-5.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
 											</div>
 										</div>
-										<div class="col-12 col-lg-4">
-											<div
-												class="main-calculator__item main-calculator__item--result"
-											>
-												<div class="main-calculator__item-summ">
-													<b>
-														<span data-input="calculatorResultInput">
-															1 750 000
-														</span>
-													</b>
-													<span>Сумма займа</span>
-												</div>
-												<div class="main-calculator__item-info">
-													<img src="img/decor.png" alt="" />
-													<ul>
-														<li>
-															<span>Сумма займа:</span>
-															<span>
-																<span data-input="calculatorSumInput">
-																	1 350 000
-																</span>
-															</span>
-														</li>
-														<li>
-															<span>Срок займа:</span>
-															<span>
-																<span data-input="calculatorDaysInput">
-																	160
-																</span>
-																дней
-															</span>
-														</li>
-														<li>
-															<span>Процентная ставка:</span>
-															<span>
-																<span data-input="calculatorPercentInput">
-																	0,15
-																</span>
-															</span>
-														</li>
-														<li>
-															<span>Начислено процентов:</span>
-															<span>
-																<span data-input="calculatorDifferenceInput">
-																	210 756
-																</span>
-															</span>
-														</li>
-													</ul>
-													<button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-												</div>
+										<button
+											class="carousel-control-prev"
+											type="button"
+											data-bs-target="#carouselSocial-1"
+											data-bs-slide="prev"
+										>
+											<span
+												class="carousel-control-prev-icon"
+												aria-hidden="true"
+											></span>
+											<span class="visually-hidden">Предыдущий</span>
+										</button>
+										<button
+											class="carousel-control-next"
+											type="button"
+											data-bs-target="#carouselSocial-1"
+											data-bs-slide="next"
+										>
+											<span
+												class="carousel-control-next-icon"
+												aria-hidden="true"
+											></span>
+											<span class="visually-hidden">Следующий</span>
+										</button>
+									</div>
+									<div class="social__info">
+										<h3>
+											Встреча в РОООО «Центр помощи семье и детям «Колыбель» (г.
+											Оренбург) 5.08.23
+										</h3>
+										<p>
+											Волонтеры компании посетили РОООО «Центр помощи семье и
+											детям «Колыбель» при отделе по церковной
+											благотворительности и социальному служению Оренбургской
+											епархии. Ставшая доброй традицией, работа с детьми, семьи
+											которых оказались в кризисной ситуации, детьми-сиротами,
+											детьми отцов погибших на СВО, детьми с ограниченными
+											возможностями здоровья. Провели обучение грамотному
+											использованию пластика. Поделились с детьми позитивными
+											эмоциями, раздали подарки и завершили встречу теплым
+											чаепитием.
+										</p>
+										<a href="">Смотреть</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12">
+							<div class="social__items">
+								<div class="social__item">
+									<div
+										id="carouselSocial-2"
+										class="social__item-slide carousel slide"
+										data-bs-ride="carousel"
+										data-bs-interval="false"
+										data-bs-touch="true"
+									>
+										<div class="carousel-indicators"></div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img
+													src="img/social-1.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-2.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-3.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-4.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
+											</div>
+											<div class="carousel-item">
+												<img
+													src="img/social-5.jpg"
+													class="d-block w-100"
+													alt="Фото"
+												/>
 											</div>
 										</div>
+										<button
+											class="carousel-control-prev"
+											type="button"
+											data-bs-target="#carouselSocial-2"
+											data-bs-slide="prev"
+										>
+											<span
+												class="carousel-control-prev-icon"
+												aria-hidden="true"
+											></span>
+											<span class="visually-hidden">Предыдущий</span>
+										</button>
+										<button
+											class="carousel-control-next"
+											type="button"
+											data-bs-target="#carouselSocial-2"
+											data-bs-slide="next"
+										>
+											<span
+												class="carousel-control-next-icon"
+												aria-hidden="true"
+											></span>
+											<span class="visually-hidden">Следующий</span>
+										</button>
 									</div>
-								</form>
+									<div class="social__info">
+										<h3>
+											Братья наши меньшие
+										</h3>
+										<p>
+											Традиционные визиты к животным в питомники и зоопарк. Август-ноябрь. Уфа.
+										</p>
+										<a href="">Смотреть</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-
-			<section class="main-page__services">
-				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<h2 class="main-page__services-title">
-								Группа компаний
-								<span>SPFinans</span>
-								оказывает услуги и предоставляет наличные на любые цели под
-								залог имущества
-							</h2>
-						</div>
-					</div>
-
-					<div class="row main-page__services-wrapper">
-						<div class="col-12 col-lg-6">
-							<p class="main-page__services-text">
-								Группа компаний SPFinans оказывает услуги Автоломбард и Ломбард,
-								срочно предоставляя наличные на любые цели под залог имущества.
-								Мы выдаем деньги в долг под небольшой процент на неограниченный
-								срок. В SPFinans вы можете оформить автозайм конфиденциально —
-								родственники не узнают о финансовых проблемах, менеджеры не
-								будут звонить на работу, чтобы уточнить уровень дохода, или
-								требовать внесения платежа.
-								<br />
-								<br />
-								Наша организация заслужено завоевала безоговорочное доверие
-								постоянных клиентов, поскольку предоставляет исключительно
-								надежные и простые займы на максимально выгодных условиях.
-							</p>
-							<a href="" class="btn loyalty-program__link">
-								Программа лояльности
-							</a>
-						</div>
-						<div class="col-12 col-lg-6 main-page__services-video">
-							<a
-								href="https://www.youtube.com/embed/_GOtMxjISD4?autoplay=1&amp;enablejsapi=1"
-							>
-								<img src="img/video.jpg" alt="" />
-								<svg
-									width="125"
-									height="138"
-									viewBox="0 0 125 138"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<g filter="url(#filter0_d_576_11400)">
-										<path
-											d="M100 59L25 102.301L25 15.6987L100 59Z"
-											fill="white"
-										/>
-									</g>
-									<defs>
-										<filter
-											id="filter0_d_576_11400"
-											x="0"
-											y="0.69873"
-											width="125"
-											height="136.603"
-											filterUnits="userSpaceOnUse"
-											color-interpolation-filters="sRGB"
-										>
-											<feFlood flood-opacity="0" result="BackgroundImageFix" />
-											<feColorMatrix
-												in="SourceAlpha"
-												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-												result="hardAlpha"
-											/>
-											<feOffset dy="10" />
-											<feGaussianBlur stdDeviation="12.5" />
-											<feComposite in2="hardAlpha" operator="out" />
-											<feColorMatrix
-												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-											/>
-											<feBlend
-												mode="normal"
-												in2="BackgroundImageFix"
-												result="effect1_dropShadow_576_11400"
-											/>
-											<feBlend
-												mode="normal"
-												in="SourceGraphic"
-												in2="effect1_dropShadow_576_11400"
-												result="shape"
-											/>
-										</filter>
-									</defs>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 main-page__services-items">
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2044_8)"
-									/>
-									<path
-										d="M26.5 44L44.5 26"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-									/>
-									<circle
-										cx="28.5"
-										cy="28"
-										r="4"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<circle
-										cx="42.5"
-										cy="42"
-										r="4"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2044_8"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Минимальный процент</h5>
-								<p>
-									Одни из самых низких процентов среди микрофинансовых
-									организаций.
-								</p>
-							</div>
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2044_369)"
-									/>
-									<path
-										d="M35.5 33C37.7091 33 39.5 31.2091 39.5 29C39.5 26.7909 37.7091 25 35.5 25C33.2909 25 31.5 26.7909 31.5 29C31.5 31.2091 33.2909 33 35.5 33Z"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M27.5 45V42C27.5 40.3431 28.8431 39 30.5 39H40.5C42.1569 39 43.5 40.3431 43.5 42V45"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2044_369"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Выезд специалиста</h5>
-								<p>
-									Наш специалист приедет к Вам с денежными средствами и заключит
-									договор займа на месте.
-								</p>
-							</div>
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2049_898)"
-									/>
-									<ellipse
-										cx="35.5"
-										cy="29"
-										rx="11"
-										ry="4"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<path
-										d="M46.5 35C46.5 37.2091 41.5751 39 35.5 39C29.4249 39 24.5 37.2091 24.5 35"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<path
-										d="M24.5 29V41C24.5 43.2091 29.4249 45 35.5 45C41.5751 45 46.5 43.2091 46.5 41V29"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2049_898"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Выкуп залога</h5>
-								<p>
-									Мы выкупаем залог из любой финансовой организации в любое
-									время.
-								</p>
-							</div>
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2049_942)"
-									/>
-									<path
-										d="M40.5 21.6667V27.0001"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M30.5 21.6667V27.0001"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M23.5 32H47.5"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<rect
-										x="23.5"
-										y="23"
-										width="24"
-										height="24"
-										rx="5"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2049_942"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Выгодный перерасчет</h5>
-								<p>
-									Перерасчёт процентов производится по дням, а не по неделям и
-									месяцам, как у наших конкурентов.
-								</p>
-							</div>
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2049_857)"
-									/>
-									<path
-										d="M29.5 35L40.5 35C42.1569 35 43.5 33.6569 43.5 32L43.5 28C43.5 26.3431 42.1569 25 40.5 25L32.5 25C30.8431 25 29.5 26.3408 29.5 27.9976C29.5 35.0069 29.5 45 29.5 45"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2049_857"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Бесплатная парковка</h5>
-								<p>
-									Бесплатная охраняемая стоянка для клиентов нашей компании.
-								</p>
-							</div>
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2049_875)"
-									/>
-									<path
-										d="M29.5 35L40.5 35C42.1569 35 43.5 33.6569 43.5 32L43.5 28C43.5 26.3431 42.1569 25 40.5 25L32.5 25C30.8431 25 29.5 26.3423 29.5 27.9992C29.5 31.4596 29.5 35.6469 29.5 39M29.5 45C29.5 45 29.5 42.4387 29.5 39M29.5 39L26.5 39M29.5 39L36.5 39"
-										stroke="#00AC3C"
-										stroke-width="2"
-										stroke-linecap="round"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2049_875"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Отсутствие комиссии</h5>
-								<p>
-									Кроме оговорённого процента никаких дополнительных платежей и
-									комиссий.
-								</p>
-							</div>
-							<div class="main-page__services-item">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="71"
-									height="70"
-									viewBox="0 0 71 70"
-									fill="none"
-								>
-									<circle
-										opacity="0.4"
-										cx="35.5"
-										cy="35"
-										r="35"
-										fill="url(#paint0_linear_2049_916)"
-									/>
-									<rect
-										x="27.5"
-										y="26"
-										width="6"
-										height="6"
-										rx="2"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<rect
-										x="22.5"
-										y="35"
-										width="6"
-										height="6"
-										rx="2"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<rect
-										x="32.5"
-										y="35"
-										width="6"
-										height="6"
-										rx="2"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<rect
-										x="42.5"
-										y="35"
-										width="6"
-										height="6"
-										rx="2"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<rect
-										x="37.5"
-										y="26"
-										width="6"
-										height="6"
-										rx="2"
-										stroke="#00AC3C"
-										stroke-width="2"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear_2049_916"
-											x1="126.826"
-											y1="-45.5"
-											x2="11.3264"
-											y2="70"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#00AC3C" />
-											<stop offset="1" stop-color="#00AC3C" stop-opacity="0" />
-										</linearGradient>
-									</defs>
-								</svg>
-								<h5>Бесплатное такси</h5>
-								<p>Вызов такси за наш счет по программе Авто на стоянку.</p>
-							</div>
-							<div class="main-page__services-btn">
-								<button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-							</div>
+							<button class="load-more__btn">Загрузить ещё</button>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="ads">
+			<section class="loan-application">
 				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="title__wrapper">
-								<h3>Объявления в Санкт-Петербурге</h3>
-								<a href="" class="title__wrapper-link">
-									Все объявления
-									<svg
-										width="16"
-										height="16"
-										viewBox="0 0 16 16"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M6.66602 12L10.666 8L6.66602 4"
-											stroke="#00AC3C"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 col-xl-4">
-							<div class="lot__item">
-								<div class="lot__info">
-									<div class="lot__num">
-										Лот №
-										<span>1</span>
-									</div>
-									<div class="lot__text">
-										Легковой универсал, марки BMW X4 M, 2019 года выпуска, гос.
-										номер: Х 580 СО 799, VIN: WBSUJ01030LS***, цвет кузова
-										Красный
-									</div>
-								</div>
-								<div class="lot__address">
-									<span>Место проведения:</span>
-									<p>Москва г., Воронцовские пруды д.3</p>
-								</div>
-								<div class="lot__description">
-									<span>Описание:</span>
-									<p>Проводится набор участников для проведения торгов.</p>
-								</div>
-								<button class="btn lot__btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-							</div>
-						</div>
-						<div class="col-12 col-xl-4">
-							<div class="lot__item">
-								<div class="lot__info">
-									<div class="lot__num">
-										Лот №
-										<span>2</span>
-									</div>
-									<div class="lot__text">
-										Легковой универсал, марки BMW X4 M, 2019 года выпуска, гос.
-										номер: Х 580 СО 799, VIN: WBSUJ01030LS***, цвет кузова
-										Красный
-									</div>
-								</div>
-								<div class="lot__address">
-									<span>Место проведения:</span>
-									<p>Москва г., Воронцовские пруды д.3</p>
-								</div>
-								<div class="lot__description">
-									<span>Описание:</span>
-									<p>Проводится набор участников для проведения торгов.</p>
-								</div>
-								<button class="btn lot__btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-							</div>
-						</div>
-						<div class="col-12 col-xl-4">
-							<div class="lot__item">
-								<div class="lot__info">
-									<div class="lot__num">
-										Лот №
-										<span>3</span>
-									</div>
-									<div class="lot__text">
-										Легковой универсал, марки BMW X4 M, 2019 года выпуска, гос.
-										номер: Х 580 СО 799, VIN: WBSUJ01030LS***, цвет кузова
-										Красный
-									</div>
-								</div>
-								<div class="lot__address">
-									<span>Место проведения:</span>
-									<p>Москва г., Воронцовские пруды д.3</p>
-								</div>
-								<div class="lot__description">
-									<span>Описание:</span>
-									<p>Проводится набор участников для проведения торгов.</p>
-								</div>
-								<button class="btn lot__btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="main-conditions">
-				<div class="main-conditions__inner">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-lg-5">
-								<h3 class="main-conditions__title">Условия займа</h3>
-							</div>
-							<div class="col-12 col-lg-7"></div>
-							<div class="col-12 col-lg-5">
-								<p class="main-conditions__text">
-									SPFinans выдает наличные гражданам РФ от 18 до 70 лет. Чтобы
-									воспользоваться услугой Автоломбард не требуется справка о
-									доходах с работы, подтверждение трудового стажа. На решение о
-									выдаче займа не влияет кредитная история клиента. Значение
-									имеет вид залогового имущества, его состояние.
-								</p>
-								<p class="main-conditions__text">
-									Предлагаем клиентам удобные условия сотрудничества:
-								</p>
-								<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-									Оставить заявку
-								</button>	
-							</div>
-							<div class="col-12 col-lg-1"></div>
-							<div class="col-12 col-lg-5">
-								<ul class="main-conditions__list">
-									<li>
-										Оформление договора займа — не заключаем с клиентами договор
-										лизинга или купли-продажи.
-									</li>
-									<li>Оплата процентов только за дни пользования деньгами.</li>
-									<li>Выдача наличных или перевод безналичным способом.</li>
-									<li>
-										Быстрое одобрение — результат рассмотрения в день заполнения
-										заявки.
-									</li>
-									<li>
-										Без скрытых комиссий — только оплата процентов, указанных в
-										договоре.
-									</li>
-									<li>Возможность погасить заем досрочно.</li>
-									<li>
-										Оплата процентов каждый месяц, а погашение основного долга
-										удобными суммами.
-									</li>
-									<li>
-										Офисы недалеко от работы, дома — около 20 ломбардов в
-										Москве, Екатеринбурге, Казани и других городах.
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="row" data-height="170">
-							<div class="col-12 col-lg-5">
-								<h3 class="main-conditions__title">Услуга Ломбард</h3>
-							</div>
-							<div class="col-12 col-lg-1"></div>
-							<div class="col-12 col-lg-5">
-								<ul class="main-conditions__list">
-									<li>
-										Деньги под залог ПТС, автомобиля—иномарки возрастом до 15
-										лет и отечественные авто до 7 лет Сумма займа при оформлении
-										услуги Автоломбард под ПТС зависит от технического состояния
-										транспортного средства, которое определяется по результатам
-										оценки.
-									</li>
-									<li>
-										Перезалог ПТС и автомобиля— выкуп транспортного средства,
-										оставленного в автоломбарде в залог, у любых кредитных
-										организаций.
-									</li>
-									<li>Займы под залог коммерческой недвижимости.</li>
-									<li>
-										Деньги под залог бытовой техники, спецтехники, инструментов
-										— займы с низкой процентной ставкой по минимальному пакету
-										документов.
-									</li>
-									<li>
-										Наличные под залог меховых, ювелирных изделий, бриллиантов—
-										все предметы залога застрахованы.
-									</li>
-									<li>
-										Деньги для предпринимателей —сумма от 2 000 000 рублей для
-										физических и юридических лиц.
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="main-conditions__more">
-					<span>Читать далее</span>
-				</div>
-			</section>
-
-			<section class="main-page__certificates">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="title__wrapper">
-								<h2>Сертификаты</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row main-page__certificates-items">
-						<div class="col-md-4">
-							<div class="main-page__certificates-item">
-								<img src="img/certificate-1.jpg" alt="Свидетельство" />
-							</div>
-						</div>
-
-						<div class="col-md-4">
-							<div class="main-page__certificates-item">
-								<img src="img/certificate-2.jpg" alt="Свидетельство" />
-							</div>
-						</div>
-
-						<div class="col-md-4">
-							<div class="main-page__certificates-item">
-								<img src="img/certificate-3.jpg" alt="Свидетельство" />
-							</div>
-						</div>
-					</div>
-					<div class="row main-page__certificates-text">
-						<div class="col-12">
-							<p>
-								Полное наименование: Общество с ограниченной ответственностью
-								Микрокредитная компания «СПФинанс». Краткое наименование: ООО
-								«МКК «СПФинанс».Директор Сахибгареев Данил Галиевич (назначен
-								28.04.2025г.). Юридический адрес: 450047, Республика
-								Башкортостан, г. Уфа, ул. Бакалинская, д. 25, этаж 1, офис 20.
-								Режим работы: пн-пт с 9 до 19, суб. с 10 до 13, воскресенье —
-								выходной. Информация о структурных подразделениях ().
-								<br />
-								<br />
-								Микрокредитная компания осуществляет свою деятельность под
-								контролем Центрального Банка РФ (), регистрационный номер в
-								реестре микрофинансовых организаций: 1903111009138 от 14.02.2019
-								г. ().
-								<br />
-								<br />
-								Интернет приемная Банка России ().
-								<br />
-								<br />
-								ООО «МКК «СПФинанс» является членом Саморегулируемой организации
-								– Союз «МИКРОФИНАНСОВЫЙ АЛЬЯНС» с 18.06.2019 г., расположенной
-								по адресу: Юридический адрес: 125367, Россия, г. Москва,
-								полесский проезд, д. 16, стр. 1, оф. 308, Эл. почта:
-								info@alliance-mfo.ru, тел: 8 800 555 24 99, сайт .
-								Регистрационный номер в СРО – 06 19 031 29 1260. Форма подачи
-								обращений в СРО ().
-								<br />
-								<br />
-								Реестр членов СРО ()
-								<br />
-								<br />
-								Обращения к финансовому уполномоченному могут быть направлены в
-								письменной форме по адресу: 119017, г. Москва, Старомонетный
-								пер., дом 3 или через Личный кабинет на сайте финансового
-								уполномоченного (). Адрес местонахождения: 119017, г. Москва,
-								Старомонетный пер., дом 3. Контактный телефон 8 (800) 200 00 10
-								(звонок по России бесплатный).
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="reviews">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="title__wrapper">
-								<h2>Отзывы наших клиентов</h2>
-								<a href="" class="title__wrapper-link">
-									Все отзывы
-									<svg
-										width="16"
-										height="16"
-										viewBox="0 0 16 16"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M6.66602 12L10.666 8L6.66602 4"
-											stroke="#00AC3C"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-4 col-sm-12">
-							<div class="review__item">
-								<div class="review__top">
-									<div class="review__name">Александр</div>
-									<div class="review__date">03.08.2022</div>
-								</div>
-								<div class="review__theme">Займ под залог ПТС</div>
-								<p class="review__text">
-									Отзывов никогда не писал, но решил помочь сомневающимся. У
-									меня в собственности два Камаза, пытался взять под них кредит
-									в банке, но оказывается для этого нужно нехило потрудиться!
-									Помимо папки бумаг, оказывается нужны поручители, страховка
-									жизни и машин и еще куча расходов, когда денег и так нет! СП
-									Финанс меня просто вытащил из этой канители. Все у них четко,
-									понятно. Ничего не скрывали, проценты сразу озвучили,
-									потребовали только ПТС. Да, Камазы не новые, но оценили
-									справедливо, по моему мнению, деньги у меня были уже на второй
-									день. Оказывается, так можно было. Спасибо вам!
-								</p>
-								<a href="" class="review__more">Читать далее</a>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-12">
-							<div class="review__item">
-								<div class="review__top">
-									<div class="review__name">Алина</div>
-									<div class="review__date">03.08.2022</div>
-								</div>
-								<div class="review__theme">Займ под залог ПТС</div>
-								<p class="review__text">
-									Спасибо, что вы есть! Хочу поблагодарить компанию за то, что
-									они ориентированы именно на сотрудничество, а не на разовую
-									услугу. Классно выстраивают взаимодействие, молниеносно все
-									разъясняют, разжевывают, помогают разобраться в нюансах.
-									Понравилось, что не давят, а показывают выгоду. Вообщем умеют
-									работать с человеком, а не клиентом! Брала займ под ПТС машины
-									и очень довольна, что не пришлось ее продавать. Деньги выдали
-									в этот же день, кстати сумма достойная получилась, я из нее
-									еще и платеж первый сделала. Не мучили сбором бумажек.
-									Сказать, что довольна мало, вы отличная команда!
-								</p>
-								<a href="" class="review__more">Читать далее</a>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-12">
-							<div class="review__item">
-								<div class="review__top">
-									<div class="review__name">Сергей</div>
-									<div class="review__date">03.08.2022</div>
-								</div>
-								<div class="review__theme">Займ под залог ПТС</div>
-								<p class="review__text">
-									Я в СПФинанс пришла уже с горьким опытом…брала займ под залог
-									ПТС и еле вырулила из ситуации из-за громадных процентов. Сама
-									кормлю семью, на машине подрабатываю, срочно деньги были
-									нужны, но продавать кормилицу не вариант. Изучила их сайт, все
-									доступно, понятно. Понравилось, что у них нет никаких скрытых
-									платежей и комиссий, а я знаю, к чему они приводят. Вообщем
-									все быстро у нас срослось, машину не пришлось отдавать в
-									залог. Оценили, рассказали и деньги выдали! Просто молниеносно
-									Я в СПФинанс пришла уже с горьким опытом…брала займ под залог
-									ПТС и еле вырулила из ситуации из-за громадных процентов. Сама
-									кормлю семью, на машине подрабатываю, срочно деньги были
-									нужны, но продавать кормилицу не вариант. Изучила их сайт, все
-									доступно, понятно. Понравилось, что у них нет никаких скрытых
-									платежей и комиссий, а я знаю, к чему они приводят. Вообщем
-									все быстро у нас срослось, машину не пришлось отдавать в
-									залог. Оценили, рассказали и деньги выдали! Просто молниеносно
-								</p>
-								<a href="" class="review__more">Читать далее</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="main-page__news">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="title__wrapper">
-								<h2>Новости</h2>
-								<a href="" class="title__wrapper-link">
-									Все новости
-									<svg
-										width="16"
-										height="16"
-										viewBox="0 0 16 16"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M6.66602 12L10.666 8L6.66602 4"
-											stroke="#00AC3C"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row news__link-items">
-						<div class="col-md-3 news__link-item">
-							<a href="#" class="news__link">
-								<img src="img/news.jpg" alt="Новости" class="news__link-img" />
-								<h4 class="news__link-title">
-									Роскачество займется оценкой продуктов МФО, банков и страховых
-									компаний
-								</h4>
-								<span class="news__link-date">24.03.2022</span>
-							</a>
-						</div>
-						<div class="col-md-3 news__link-item">
-							<a href="#" class="news__link">
-								<img
-									src="img/news-2.jpg"
-									alt="Новости"
-									class="news__link-img"
-								/>
-								<h4 class="news__link-title">
-									Одна из крупнейших микрофинансовых компаний России решила
-									провести IPO. Пока на рынке торгуются только облигации МФО
-								</h4>
-								<span class="news__link-date">24.03.2022</span>
-							</a>
-						</div>
-						<div class="col-md-3 news__link-item">
-							<a href="#" class="news__link">
-								<img
-									src="img/news-2.jpg"
-									alt="Новости"
-									class="news__link-img"
-								/>
-								<h4 class="news__link-title">
-									Число россиян с долгами выросло до 43 млн
-								</h4>
-								<span class="news__link-date">24.03.2022</span>
-							</a>
-						</div>
-						<div class="col-md-3 news__link-item">
-							<a href="#" class="news__link">
-								<img src="img/news.jpg" alt="Новости" class="news__link-img" />
-								<h4 class="news__link-title">
-									Роскачество займется оценкой продуктов МФО, банков и страховых
-									компаний
-								</h4>
-								<span class="news__link-date">24.03.2022</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="main-map">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-12 col-lg-8">
-							<h3 class="main-map__title">Сеть наших филиалов</h3>
-						</div>
-						<div class="col-1 d-none d-xl-block"></div>
-						<div class="col-12 col-lg-4 col-xl-3">
-							<div class="main-map__select">
-								<select class="form-select">
-									<option value="1" selected>Санкт-Петербург</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="main-map__map">
-						<div id="map" style="width: 100%; height: 100%"></div>
-					</div>
-					<div class="main-map__form">
+					<div class="main-map__form loan-application__form">
 						<h3>Заявка на займ</h3>
-						<form class="d-flex gap-4">
+						<form class="d-flex gap-4" id="loan-application">
 							<input type="text" name="" id="" placeholder="Имя" />
 							<input type="tel" name="" id="" placeholder="+7" required />
 							<select class="form-select">
@@ -2446,90 +916,7 @@
 					</div>
 				</div>
 			</section>
-
-			<div class="main-page__about">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="text-container">
-								<p class="text-content truncated-text expanded-text">
-									Полное наименование: Общество с ограниченной ответственностью
-									Микрокредитная компания «СПФинанс». Краткое наименование: ООО
-									«МКК «СПФинанс».Директор Сахибгареев Данил Галиевич (назначен
-									28.04.2025г.). Юридический адрес: 450047, Республика
-									Башкортостан, г. Уфа, ул. Бакалинская, д. 25, этаж 1, офис 20.
-									Режим работы: пн-пт с 9 до 19, суб. с 10 до 13, воскресенье —
-									выходной. Информация о структурных подразделениях ().
-									<br />
-									<br />
-									Микрокредитная компания осуществляет свою деятельность под
-									контролем Центрального Банка РФ (), регистрационный номер в
-									реестре микрофинансовых организаций: 1903111009138 от
-									14.02.2019 г. ().
-									<br />
-									<br />
-									Интернет приемная Банка России ().
-									<br />
-									<br />
-									ООО «МКК «СПФинанс» является членом Саморегулируемой
-									организации – Союз «МИКРОФИНАНСОВЫЙ АЛЬЯНС» с 18.06.2019 г.,
-									расположенной по адресу: Юридический адрес: 125367, Россия, г.
-									Москва, полесский проезд, д. 16, стр. 1, оф. 308, Эл. почта:
-									info@alliance-mfo.ru, тел: 8 800 555 24 99, сайт .
-									Регистрационный номер в СРО – 06 19 031 29 1260. Форма подачи
-									обращений в СРО ().
-									<br />
-									<br />
-									Реестр членов СРО ()
-									<br />
-									<br />
-									Обращения к финансовому уполномоченному могут быть направлены
-									в письменной форме по адресу: 119017, г. Москва, Старомонетный
-									пер., дом 3 или через Личный кабинет на сайте финансового
-									уполномоченного (). Адрес местонахождения: 119017, г. Москва,
-									Старомонетный пер., дом 3. Контактный телефон 8 (800) 200 00
-									10 (звонок по России бесплатный).
-								</p>
-								<button class="expand-button">Читать далее</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</main>
-
-		<div class="popup modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered">
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <h3 class="modal-title" id="exampleModalToggleLabel">Оставить заявку</h3>
-				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<form
-					class="d-flex flex-column popup__form"
-					id="">
-						<input
-							type="text"
-							name=""
-							id=""
-							placeholder="Имя"
-							required
-						/>
-						<input type="tel" name="" id="" placeholder="+7" required />
-						<input
-							type="text"
-							name=""
-							id=""
-							placeholder="Комментарий"
-						/>
-						<input class="btn" type="submit" value="Оставить заявку" />
-					</form>
-				</div>
-			  </div>
-			</div>
-		</div>
-
 
 		<footer class="footer">
 			<div class="container">
@@ -2818,7 +1205,8 @@
 						</div>
 						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
 							Оставить заявку
-						</button>						<div class="footer__phones">
+						</button>						
+						<div class="footer__phones">
 							<a href="tel:88007002003" class="footer__phone">
 								+7 (800) 700-20-03
 							</a>
@@ -2866,14 +1254,12 @@
 			</div>
 		</footer>
 
-		<script src="js/cleave.min.js"></script>
-		<script src="js/wNumb.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script
 			src="https://api-maps.yandex.ru/3.0/?apikey=41d880d2-9128-4f13-b1e3-28e243c3a9ef&lang=ru_RU"
 			type="text/javascript"
 		></script>
 		<script src="js/script.js"></script>
+		<script src="js/social.js"></script>
 	</body>
 </html>

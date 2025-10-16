@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="css/dop-oxana.css " />
 		<title>SPFinans</title>
 	</head>
-	<body class="body payment-page">
+	<body class="body">
 		<header class="header" id="header">
 			<div class="container">
 				<div class="row">
@@ -694,7 +694,7 @@
 			</div>
 		</header>
 
-		<main class="main">
+		<main class="main payment-page">
 			<section class="payment">
 				<div class="container">
 					<div class="payment__inner">
@@ -800,7 +800,7 @@
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<button class="btn lombard__how-work-btn">Оставить заявку</button>
+							<button class="btn lombard__how-work-btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
 						</div>
 					</div>
 				</div>
@@ -1092,7 +1092,9 @@
 								</svg>
 							</a>
 						</div>
-						<button class="btn">Оставить заявку</button>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+							Оставить заявку
+						</button>						
 						<div class="footer__phones">
 							<a href="tel:88007002003" class="footer__phone">
 								+7 (800) 700-20-03

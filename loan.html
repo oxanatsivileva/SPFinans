@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="css/dop-oxana.css "/>
 		<title>SPFinans</title>
 	</head>
-	<body class="body loan">
+	<body class="body">
 		<header class="header" id="header">
 			<div class="container">
 				<div class="row">
@@ -694,7 +694,7 @@
 			</div>
 		</header>
 
-		<main class="main">
+		<main class="main loan">
 			<section class="loan__banner banner">
 				<div class="banner__img">
 					<img src="img/loan.jpg">
@@ -708,7 +708,7 @@
 									<br />
 									в Санкт-Петербурге
 								</h1>
-								<a href="#" class="btn loan__btn">Оставить заявку</a>
+								<button href="#" class="btn loan__btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Оставить заявку</button>
 							</div>
 						</div>
 						<div class="row loan-item__btns">
@@ -1201,7 +1201,9 @@
 															</span>
 														</li>
 													</ul>
-													<div class="btn">Оставить заявку</div>
+													<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+														Оставить заявку
+													</button>
 												</div>
 											</div>
 										</div>
@@ -1801,8 +1803,9 @@
 								</svg>
 							</a>
 						</div>
-						<button class="btn">Оставить заявку</button>
-						<div class="footer__phones">
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+							Оставить заявку
+						</button>						<div class="footer__phones">
 							<a href="tel:88007002003" class="footer__phone">
 								+7 (800) 700-20-03
 							</a>
