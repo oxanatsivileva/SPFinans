@@ -379,9 +379,31 @@ document.querySelectorAll('.review__text').forEach((item) => {
 	}
 });
 
-// карта
+// Карта
 if (document.getElementById('map')) {
 	window.map = null;
+	window.marker = null;
+
+	// Данные городов
+	const cities = {
+		spb: {
+			center: [30.315868, 59.939095],
+			marker: [30.315868, 59.939095],
+			zoom: 11,
+		},
+		msk: {
+			center: [37.617698, 55.755864],
+			marker: [37.617698, 55.755864],
+			zoom: 10,
+		},
+		kazan: {
+			center: [49.108891, 55.796289],
+			marker: [49.108891, 55.796289],
+			zoom: 16,
+		},
+		// Другие города по аналогии
+	};
+
 	// Главная функция, вызывается при запуске скрипта
 	main();
 	async function main() {
@@ -399,13 +421,16 @@ if (document.getElementById('map')) {
 			'@yandex/ymaps3-controls@0.0.1'
 		);
 
-		// Координаты центра карты
-		const CENTER_COORDINATES = [30.3812526132812, 59.94480848799107];
-		// координаты метки на карте
-		const MARKER_COORDINATES = [30.3812526132812, 59.94480848799107];
+		// Получаем выбранный город из селекта
+		const citySelect = document.getElementById('citySelect');
+		const selectedCity = citySelect.value;
+		const currentCity = cities[selectedCity];
 
 		// Объект с параметрами центра и зумом карты
-		const LOCATION = { center: CENTER_COORDINATES, zoom: 11 };
+		const LOCATION = {
+			center: currentCity.center,
+			zoom: currentCity.zoom,
+		};
 
 		// Создание объекта карты
 		map = new YMap(document.getElementById('map'), {
@@ -421,6 +446,7 @@ if (document.getElementById('map')) {
 		el.className = 'main-map__marker';
 		el.src = 'img/marker.svg';
 		el.title = 'Маркер';
+
 		// При клике на маркер меняем центр карты на LOCATION с заданным duration
 		el.onclick = () => map.update({ location: { ...LOCATION, duration: 400 } });
 
@@ -428,13 +454,34 @@ if (document.getElementById('map')) {
 		const imgContainer = document.createElement('div');
 		imgContainer.appendChild(el);
 
-		// Добавление центра карты
-		map.addChild(new YMapMarker({ coordinates: CENTER_COORDINATES }));
+		// Создаем маркер и сохраняем ссылку на него
+		marker = new YMapMarker({ coordinates: currentCity.marker }, imgContainer);
 
 		// Добавление маркера на карту
-		map.addChild(
-			new YMapMarker({ coordinates: MARKER_COORDINATES }, imgContainer)
-		);
+		map.addChild(marker);
+
+		// Обработчик изменения города
+		citySelect.addEventListener('change', function () {
+			const selectedCity = this.value;
+			const cityData = cities[selectedCity];
+
+			if (cityData) {
+				// Обновляем местоположение карты
+				map.setLocation({
+					center: cityData.center,
+					zoom: cityData.zoom,
+				});
+
+				// Удаляем старый маркер
+				map.removeChild(marker);
+
+				// Создаем новый маркер с новыми координатами
+				marker = new YMapMarker({ coordinates: cityData.marker }, imgContainer);
+
+				// Добавляем новый маркер
+				map.addChild(marker);
+			}
+		});
 	}
 }
 

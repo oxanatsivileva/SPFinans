@@ -41,12 +41,23 @@
 	.main-calculator__item-info {
 		padding-left: 20px;
 		padding-right: 20px;
+
 	}
 	.loan__docs-item {
 		padding: 50px;
 	}
 	.loan__info-title br {
 		display: none;
+	}
+	.city .modal-dialog {
+		margin-left: auto;
+	}
+	.header__logo {
+		margin-right: auto;
+	}
+	.main-calculator__item-info img {
+		width: 120px;
+		height: 122px;
 	}
 }
 @media (max-width: 1399px) {
@@ -215,6 +226,9 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+	.main-calculator__item-info img {
+        display: none;
+    }
 	.footer__stores {
 		gap: 5px;
 	}
@@ -270,7 +284,6 @@
 	.social__item-slide {
 		width: 50%;
 	}
-	
 }
 @media (max-width: 1000px) {
 	.main-hero .carousel-item {
@@ -625,7 +638,7 @@
 
 	.loyalty__items {
 		grid-template-columns: repeat(2, 1fr);
-		grid-auto-rows: 1fr;		
+		grid-auto-rows: 1fr;
 	}
 
 	.loyalty__application-wrapper {
@@ -639,8 +652,8 @@
 	}
 	.social__item-slide,
 	.social__info {
-        width: 100%;
-    }
+		width: 100%;
+	}
 
 	.social__item-slide {
 		height: 270px;
@@ -949,10 +962,8 @@
 	}
 	.lombard__how-work {
 		padding: 40px 0 20px;
-		border-top: 1px solid
-		var(--razdeliteli-color-border);
-		border-bottom: 1px solid
-		var(--razdeliteli-color-border);
+		border-top: 1px solid var(--razdeliteli-color-border);
+		border-bottom: 1px solid var(--razdeliteli-color-border);
 	}
 	.lombard__how-work-items {
 		border-bottom: none;
@@ -1087,10 +1098,8 @@
 	}
 
 	.lombard__guarantees {
-		border-top: 1px solid
-		var(--razdeliteli-color-border);
-		border-bottom: 1px solid
-		var(--razdeliteli-color-border);
+		border-top: 1px solid var(--razdeliteli-color-border);
+		border-bottom: 1px solid var(--razdeliteli-color-border);
 	}
 
 	.contacts-map__map {
@@ -1194,12 +1203,13 @@
 	.social__item-slide,
 	.social__info {
 		border-radius: 20px;
-    }
+	}
 	.social__item .carousel-indicators {
 		margin-bottom: 25px;
 		margin-left: 30px;
 	}
-	.social__item .carousel-control-next, .social__item .carousel-control-prev {
+	.social__item .carousel-control-next,
+	.social__item .carousel-control-prev {
 		bottom: 30px;
 	}
 	.social__info h3 {
@@ -1223,7 +1233,6 @@
 	.popup__form .btn {
 		margin-top: 20px;
 	}
-
 }
 @media (max-width: 575px) {
 	.header {
@@ -1380,6 +1389,14 @@
 	.loyalty__inputs {
 		grid-template-columns: 100%;
 	}
+	.city .modal-dialog {
+		margin-left: 8px;
+		width: calc(100% - 16px);
+		margin-top: 8px;
+	}
+	.city .modal-dialog ul {
+		grid-template-columns: auto auto;
+	}
 }
 @media (max-width: 450px) {
 	.header__logo svg {
@@ -1396,6 +1413,12 @@
 	.main-page__services-video a {
 		height: 200px;
 	}
+	.city .modal-dialog h3 {
+		font-size: 24px;
+	}
+	.city .modal-dialog ul {
+		grid-template-columns: auto;
+	}
 }
 @media (max-width: 371px) {
 	.main {
@@ -1409,7 +1432,7 @@
 }
 
 @media (max-width: 352px) {
-    .main {
-        padding-top: 430px;
-    }
+	.main {
+		padding-top: 430px;
+	}
 }

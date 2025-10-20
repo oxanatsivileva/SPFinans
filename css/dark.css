@@ -372,7 +372,8 @@
 
 .dark .lombard__advantages-items,
 .dark .lombard__how-work-items {
-    border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+	border-bottom: 1px solid
+		var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
 }
 
 .dark .faq__item p {
@@ -396,28 +397,29 @@
 }
 
 .dark .popup .modal-content {
-    background-color: var(--fony--vspomogatelnye-cveta-background-white-dark);
+	background-color: var(--fony--vspomogatelnye-cveta-background-white-dark);
 }
 .dark .popup .btn-close {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E");
 }
 
-.dark .popup__form input {
-	color: var(--fony--vspomogatelnye-cveta-background-white);	
+.dark .popup__form input,
+.dark .popup__form textarea {
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 	background: var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
 }
 
 .dark .popup__form input::-webkit-input-placeholder {
-	color: var(--fony--vspomogatelnye-cveta-background-white);	
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 .dark .popup__form input::-moz-placeholder {
-	color: var(--fony--vspomogatelnye-cveta-background-white);	
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 .dark .popup__form input:-moz-placeholder {
-	color: var(--fony--vspomogatelnye-cveta-background-white);	
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 .dark .popup__form input:-ms-input-placeholder {
-	color: var(--fony--vspomogatelnye-cveta-background-white);	
+	color: var(--fony--vspomogatelnye-cveta-background-white);
 }
 
 .dark .popup__form .btn {
@@ -427,9 +429,16 @@
 
 .dark .popup__form .btn:hover {
 	color: var(--fony--vspomogatelnye-cveta-background-white);
-    background: var(--cveta-brenda-color-primory-2);
+	background: var(--cveta-brenda-color-primory-2);
 }
 
+.dark .city .modal-content {
+	background-color: #3c5e69;
+}
+.dark .city .btn-close {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e");
+	opacity: 1;
+}
 
 @media (max-width: 1199px) {
 	.dark .menu__list-level {
@@ -458,8 +467,6 @@
 			rgba(60, 94, 105, 1) 60%
 		);
 	}
-
-	
 }
 
 @media (max-width: 767px) {
@@ -468,6 +475,7 @@
 	}
 
 	.dark .lombard__advantages {
-		border-bottom: 1px solid var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
+		border-bottom: 1px solid
+			var(--fony--vspomogatelnye-cveta-background-light-grey-dark);
 	}
 }
