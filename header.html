@@ -347,7 +347,11 @@
 								</div>
 							</div>
 							<div class="header__contacts">
-								<div class="header__address">
+								<div
+									class="header__address"
+									data-bs-toggle="modal"
+									data-bs-target="#city"
+								>
 									<svg
 										width="10"
 										height="12"
@@ -362,8 +366,9 @@
 											fill="#2B454E"
 										/>
 									</svg>
-									Санкт-Петербург
+									<span>Санкт-Петербург</span>
 								</div>
+
 								<div class="header__phones">
 									<a href="tel:88007002003" class="header__phone">
 										+7 (800) 700-20-03
@@ -401,7 +406,7 @@
 								Личный кабинет
 							</a>
 							<label class="switch">
-								<input type="checkbox" checked/>
+								<input type="checkbox" checked />
 							</label>
 						</div>
 					</div>
@@ -608,6 +613,56 @@
 				</div>
 			</div>
 		</header>
+
+		<div
+			class="modal fade city"
+			id="city"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<h3>Выберите город</h3>
+						<ul>
+							<li>Москва</li>
+							<li>Казань</li>
+							<li>Стерлитамак</li>
+							<li>Санкт-Петербург</li>
+							<li>Уфа</li>
+							<li>Октябрьский</li>
+							<li>Екатеринбург</li>
+							<li>Оренбург</li>
+							<li>Салават</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const cityField = document.querySelector('.header__address span');
+			const cityList = document.querySelector('.city ul');
+			if (cityField && cityList) {
+				cityList.addEventListener('click', (e) => {
+					if (e.target.tagName !== 'LI') {
+						return;
+					}
+					cityField.innerText = e.target.innerText;
+					console.log(cityList.closest('.modal'));
+					bootstrap.Modal.getInstance(cityList.closest('.modal')).hide();
+				});
+			}
+		</script>
 
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/script.js"></script>
