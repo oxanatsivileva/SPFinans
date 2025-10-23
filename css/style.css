@@ -1484,7 +1484,8 @@ h4.main-conditions__text + .main-conditions__text {
 .news__link-img {
 	border-radius: 30px;
 	width: 100%;
-	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 	margin-bottom: 30px;
 }
 .news__link-title {
